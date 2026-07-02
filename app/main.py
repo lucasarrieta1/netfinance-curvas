@@ -108,6 +108,23 @@ def health():
             "instrumentos": {"pesos": len(LECAPS), "hd": len(HD_BONDS)}}
 
 
+@app.get("/api/diag")
+def diag():
+    """Diagnóstico: qué símbolos resuelve el feed activo y cuáles faltan."""
+    q = _quotes()
+    def row(i):
+        quote = q.get(i["feed_symbol"])
+        return {"ticker": i["ticker"], "feed_symbol": i["feed_symbol"],
+                "precio": quote.price if quote else None,
+                "var_pct": quote.var_pct if quote else None,
+                "encontrado": bool(quote and quote.price)}
+    pesos = [row(i) for i in LECAPS]
+    hd = [row(i) for i in HD_BONDS]
+    ok = sum(1 for r in pesos + hd if r["encontrado"])
+    return {"feed": FEED, "encontrados": ok, "total": len(pesos) + len(hd),
+            "pesos": pesos, "hd": hd}
+
+
 @app.get("/")
 def index():
     return FileResponse(os.path.join(_STATIC, "index.html"))

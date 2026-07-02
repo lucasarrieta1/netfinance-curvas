@@ -41,17 +41,29 @@ LECAPS = [
 ]
 
 
+def _iso(s):
+    """Convierte 'dd/mm/aaaa' -> 'aaaa-mm-dd'. Deja pasar ISO o None."""
+    if not s or not isinstance(s, str):
+        return s
+    if "/" in s:
+        d, m, y = s.split("/")
+        return f"{y}-{m.zfill(2)}-{d.zfill(2)}"
+    return s
+
+
 def load_hd_bonds() -> list[dict]:
     with open(_DATA, encoding="utf-8") as f:
         raw = json.load(f)
     out = []
     for name, b in raw.items():
+        if name.startswith("BP"):        # excluir BOPREAL
+            continue
         out.append({
             "ticker": name,
             "feed_symbol": name + "D",          # precio en dólares (MEP)
             "moneda": "USD",
             "ley": b.get("ley"),
-            "vencimiento": b.get("vencimiento"),
+            "vencimiento": _iso(b.get("vencimiento")),
             "cupon": b.get("cupon"),
             "amortizacion": b.get("amortizacion"),
             "schedule": b.get("schedule", []),
