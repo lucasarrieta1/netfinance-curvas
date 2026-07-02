@@ -1,33 +1,41 @@
 """
 Interfaz común de proveedores de precios (patrón adaptador).
 
-Para agregar un proveedor nuevo (BYMA, IOL, PPI, Cocos, ...) sólo hay que
-crear una subclase de FeedProvider e implementar `fetch()`.  El resto del
-sistema (cálculo, endpoints, front) queda intacto: se cambia UNA línea en
-config.py.
+fetch() devuelve un snapshot ANIDADO por mercado, para evitar colisiones de
+tickers entre mercados (p.ej. GGAL acción local vs GGAL ADR, AAPL CEDEAR vs
+AAPL acción USA):
 
-`fetch()` devuelve un dict:  { feed_symbol: Quote }
+    { mercado: { symbol: Quote } }
+
+Mercados:
+    arg_fi       renta fija ARS/USD (LECAP/BONCAP/HD/CER)  [notes+bonds+corp]
+    arg_eq       acciones argentinas (panel líder)          [arg_stocks]
+    arg_cedears  CEDEARs                                     [arg_cedears]
+    usa_adrs     ADRs argentinos en USA                      [usa_adrs]
+    usa_stocks   acciones USA                                [usa_stocks]
+
+fetch_fx() devuelve el dólar financiero: { "mep": float|None, "ccl": float|None }
 """
 from __future__ import annotations
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Optional
 import datetime as _dt
+
+MERCADOS = ["arg_fi", "arg_eq", "arg_cedears", "usa_adrs", "usa_stocks"]
 
 
 @dataclass
 class Quote:
     symbol: str
-    last: Optional[float] = None          # último precio operado
+    last: Optional[float] = None
     bid: Optional[float] = None
     ask: Optional[float] = None
-    prev_close: Optional[float] = None    # cierre anterior
-    var_pct: Optional[float] = None       # variación % del día
+    var_pct: Optional[float] = None
     volume: Optional[float] = None
-    ts: Optional[str] = None              # hora del dato
+    ts: Optional[str] = None
 
     @property
     def price(self) -> Optional[float]:
-        """Precio de referencia para valuar: last, o mid, o bid/ask."""
         if self.last:
             return self.last
         if self.bid and self.ask:
@@ -38,10 +46,14 @@ class Quote:
 class FeedProvider:
     name = "base"
 
-    def fetch(self, symbols: list[str]) -> dict[str, Quote]:
+    def fetch(self) -> dict[str, dict[str, Quote]]:
+        """Devuelve {mercado: {symbol: Quote}}."""
         raise NotImplementedError
 
-    # utilidad para subclases
+    def fetch_fx(self) -> dict[str, Optional[float]]:
+        """Dólar MEP y CCL. Por defecto no disponible."""
+        return {"mep": None, "ccl": None}
+
     @staticmethod
     def _now() -> str:
         return _dt.datetime.now().strftime("%H:%M:%S")

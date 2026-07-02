@@ -87,3 +87,38 @@ static/index.html  terminal web (curvas + tablas)
 - Los flujos futuros se recalculan contra la fecha de liquidación del día, así que las
   métricas ruedan solas a medida que van venciendo cupones.
 ```
+
+
+## Paneles
+
+Además de las dos curvas de renta fija, el terminal incluye paneles de precio +
+variación (barras + tabla) que salen del mismo feed: Acciones Argentinas (panel
+líder + Merval estimado), Bonos CER, CEDEARs, ADRs y Acciones EE.UU. (índices vía
+ETF SPY/QQQ/DIA). El header muestra dólar MEP y CCL. Los universos son listas
+editables en `app/instruments.py`. Para agregar otro panel-lista, sumá una entrada
+en `LISTAS` y una pestaña en `static/index.html`.
+
+Los mercados están scopeados (arg_fi / arg_eq / arg_cedears / usa_adrs /
+usa_stocks) para que no se pisen tickers que existen en varios (GGAL local vs ADR,
+AAPL CEDEAR vs acción USA).
+
+## Deploy (Render — recomendado)
+
+Este NO es un sitio estático: tiene backend Python. **Netlify no sirve** (da 404
+porque no puede correr el servidor). Usá un host que ejecute Python:
+
+**Render (gratis):**
+1. Subí esta carpeta a un repo de GitHub.
+2. En render.com → *New* → *Blueprint* → conectá el repo. Render lee `render.yaml`.
+3. Levanta solo. Cambiás `FEED` (mock → data912 → byma) desde *Environment* en el panel.
+
+El mismo servicio sirve el front y la API (mismo dominio → sin CORS).
+
+**Railway (alternativa, sin Git):** `npm i -g @railway/cli && railway up` desde la carpeta.
+Usa el `Procfile`. Cargá las env vars (`FEED`, etc.) en el panel.
+
+**Fly.io / cualquier VPS:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
+
+> Nota: el plan free de Render "duerme" el servicio tras unos minutos de inactividad
+> y tarda ~30 s en despertar en la primera visita. Para uso interno alcanza; si querés
+> que esté siempre activo, es el plan pago más barato.

@@ -67,34 +67,36 @@ class BymaProvider(FeedProvider):
         return self._token
 
     # ------------------------------------------------------------------
-    # Market Data
+    # Market Data (por ahora cubre renta fija -> mercado 'arg_fi')
     # ------------------------------------------------------------------
-    def fetch(self, symbols: list[str]) -> dict[str, Quote]:
+    def fetch(self) -> dict:
+        from ..instruments import LECAPS, HD_BONDS
+        want = {i["feed_symbol"] for i in LECAPS + HD_BONDS}
         token = self._get_token()
         headers = {"Authorization": f"Bearer {token}", "accept": "application/json"}
-        out: dict[str, Quote] = {}
+        arg_fi: dict = {}
         with httpx.Client(timeout=self.timeout, headers=headers) as c:
             # TODO(2): ajustar al endpoint real de renta fija del portal.
-            # Suele ser un panel completo (traés todo y filtrás) o por símbolo.
-            resp = c.get(self.md_url)          # p.ej. .../market-data/v1/snapshot/fixed-income
+            resp = c.get(self.md_url)
             resp.raise_for_status()
             data = resp.json()
 
         rows = data if isinstance(data, list) else data.get("data", data.get("items", []))
-        want = set(symbols)
         for row in rows:
             # TODO(3): mapear los nombres de campo reales del payload BYMA.
             sym = row.get("symbol") or row.get("ticker")
             if not sym or sym not in want:
                 continue
-            out[sym] = Quote(
+            arg_fi[sym] = Quote(
                 symbol=sym,
                 last=row.get("last") or row.get("closingPrice") or row.get("trade"),
                 bid=row.get("bidPrice") or row.get("bid"),
                 ask=row.get("offerPrice") or row.get("ask"),
-                prev_close=row.get("previousClosingPrice") or row.get("prevClose"),
                 var_pct=row.get("dailyVariation") or row.get("varPct"),
                 volume=row.get("volume") or row.get("volumeAmount"),
                 ts=self._now(),
             )
-        return out
+        # otros mercados (acciones/cedears/adrs/usa) se sumarán cuando se
+        # habiliten esos paneles en BYMA; por ahora quedan vacíos.
+        return {"arg_fi": arg_fi, "arg_eq": {}, "arg_cedears": {},
+                "usa_adrs": {}, "usa_stocks": {}}

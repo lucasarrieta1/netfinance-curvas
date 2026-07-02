@@ -36,7 +36,7 @@ _LECAP_ROWS = [
 
 LECAPS = [
     {"ticker": t, "tipo": tipo, "vencimiento": v, "vpv": vpv,
-     "feed_symbol": t, "moneda": "ARS", "px_ref": px}
+     "feed_symbol": t, "market": "arg_fi", "moneda": "ARS", "px_ref": px}
     for (t, tipo, v, vpv, px) in _LECAP_ROWS
 ]
 
@@ -61,6 +61,7 @@ def load_hd_bonds() -> list[dict]:
         out.append({
             "ticker": name,
             "feed_symbol": name + "D",          # precio en dólares (MEP)
+            "market": "arg_fi",
             "moneda": "USD",
             "ley": b.get("ley"),
             "vencimiento": _iso(b.get("vencimiento")),
@@ -102,10 +103,87 @@ _ACCIONES_ROWS = [
 ]
 
 ACCIONES = [
-    {"ticker": t, "nombre": n, "feed_symbol": t, "moneda": "ARS", "px_ref": px}
+    {"ticker": t, "nombre": n, "feed_symbol": t, "market": "arg_eq",
+     "moneda": "ARS", "px_ref": px}
     for (t, n, px) in _ACCIONES_ROWS
 ]
 
-# Índice símbolo_feed -> precio_ref, para el MockProvider
-PX_REF = {i["feed_symbol"]: i["px_ref"] for i in LECAPS + HD_BONDS + ACCIONES
-          if i["px_ref"] is not None}
+# --- Bonos CER (ajustables por inflación) -------------------------------
+# Panel de precio + variación. La TIR real requiere flujos + proyección CER
+# (se puede sumar como los HD). Lista editable — la composición rota.
+_CER_ROWS = [
+    ("TZXD5", "Boncer cero cupón dic-25"),
+    ("TZX26", "Boncer cero cupón 2026"),
+    ("TZXM6", "Boncer cero cupón mar-26"),
+    ("TZXJ6", "Boncer cero cupón jun-26"),
+    ("TZX27", "Boncer cero cupón 2027"),
+    ("TZX28", "Boncer cero cupón 2028"),
+    ("TZXD6", "Boncer cero cupón dic-26"),
+    ("DICP",  "Discount CER en pesos"),
+    ("PARP",  "Par CER en pesos"),
+    ("CUAP",  "Cuasipar CER"),
+    ("PAP0",  "Par CER"),
+]
+
+# --- CEDEARs (los más operados) -----------------------------------------
+_CEDEARS_ROWS = [
+    ("AAPL", "Apple"), ("MSFT", "Microsoft"), ("NVDA", "NVIDIA"),
+    ("AMZN", "Amazon"), ("GOOGL", "Alphabet"), ("META", "Meta"),
+    ("TSLA", "Tesla"), ("MELI", "MercadoLibre"), ("KO", "Coca-Cola"),
+    ("AMD", "AMD"), ("NFLX", "Netflix"), ("BABA", "Alibaba"),
+    ("JPM", "JPMorgan"), ("WMT", "Walmart"), ("DISN", "Disney"),
+    ("PBR", "Petrobras"), ("VIST", "Vista Energy"), ("TSM", "TSMC"),
+    ("BRKB", "Berkshire H."), ("XOM", "Exxon"), ("PFE", "Pfizer"),
+    ("GOLD", "Barrick Gold"), ("SPY", "S&P 500 ETF"), ("QQQ", "Nasdaq 100 ETF"),
+]
+
+# --- ADRs argentinos en USA ---------------------------------------------
+_ADRS_ROWS = [
+    ("GGAL", "Grupo Galicia"), ("YPF", "YPF"), ("BMA", "Banco Macro"),
+    ("PAM", "Pampa Energía"), ("BBAR", "BBVA Argentina"), ("CEPU", "Central Puerto"),
+    ("CRESY", "Cresud"), ("EDN", "Edenor"), ("TEO", "Telecom"),
+    ("TGS", "Transp. Gas Sur"), ("SUPV", "Supervielle"), ("LOMA", "Loma Negra"),
+    ("IRS", "IRSA"), ("VIST", "Vista Energy"), ("DESP", "Despegar"),
+    ("BIOX", "Bioceres"),
+]
+
+# --- Acciones USA + proxies de índices (vía ETF) ------------------------
+_USA_ROWS = [
+    ("SPY", "S&P 500 (ETF)"), ("QQQ", "Nasdaq 100 (ETF)"),
+    ("DIA", "Dow Jones (ETF)"), ("IWM", "Russell 2000 (ETF)"),
+    ("AAPL", "Apple"), ("MSFT", "Microsoft"), ("NVDA", "NVIDIA"),
+    ("AMZN", "Amazon"), ("GOOGL", "Alphabet"), ("META", "Meta"),
+    ("TSLA", "Tesla"), ("AMD", "AMD"), ("NFLX", "Netflix"),
+    ("JPM", "JPMorgan"), ("KO", "Coca-Cola"), ("DIS", "Disney"),
+]
+
+
+def _mk(rows, market, moneda, px=100.0):
+    return [{"ticker": t, "nombre": n, "feed_symbol": t, "market": market,
+             "moneda": moneda, "px_ref": px} for (t, n) in rows]
+
+
+CER     = _mk(_CER_ROWS,     "arg_fi",      "ARS", 100.0)
+CEDEARS = _mk(_CEDEARS_ROWS, "arg_cedears", "ARS", 20000.0)
+ADRS    = _mk(_ADRS_ROWS,    "usa_adrs",    "USD", 25.0)
+USA     = _mk(_USA_ROWS,     "usa_stocks",  "USD", 200.0)
+
+# Registro de paneles-lista genéricos (precio + variación).
+# 'indice': muestra variación agregada (prom. ponderado) tipo "Merval est.".
+LISTAS = {
+    "cer":     {"titulo": "Bonos CER", "sub": "ajustables por inflación · precio y variación",
+                "items": CER, "indice": None, "nota": "La TIR real requiere flujos + proyección CER."},
+    "cedears": {"titulo": "CEDEARs", "sub": "los más operados · precio en ARS y variación",
+                "items": CEDEARS, "indice": None, "nota": None},
+    "adrs":    {"titulo": "ADRs argentinos", "sub": "listados en EE.UU. · precio en USD y variación",
+                "items": ADRS, "indice": None, "nota": None},
+    "usa":     {"titulo": "Acciones EE.UU.", "sub": "índices vía ETF (SPY/QQQ/DIA/IWM) + líderes",
+                "items": USA, "indice": None, "nota": None},
+}
+
+# Registro GLOBAL de instrumentos (para el MockProvider y para diag).
+REGISTRY = []
+for _grp in [LECAPS, HD_BONDS, ACCIONES, CER, CEDEARS, ADRS, USA]:
+    for _i in _grp:
+        REGISTRY.append({"market": _i["market"], "feed_symbol": _i["feed_symbol"],
+                         "px_ref": _i.get("px_ref")})

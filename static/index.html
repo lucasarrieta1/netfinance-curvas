@@ -50,6 +50,14 @@
   .feed-tag.mock{color:var(--gold);border-color:#5a4a1e}
   .feed-tag.byma,.feed-tag.iol{color:var(--pos);border-color:#1e5a3a}
 
+  .fx{display:flex;gap:10px;align-items:center;order:2}
+  .fx-box{display:flex;flex-direction:column;gap:1px;padding:6px 12px;
+    background:linear-gradient(180deg,var(--panel2),var(--panel));
+    border:1px solid var(--line-soft);border-radius:9px;min-width:96px}
+  .fx-l{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+  .fx-v{font-family:var(--mono);font-size:16px;font-weight:600;letter-spacing:-.01em}
+  @media(max-width:820px){.fx{order:3;width:100%}.fx-box{flex:1}}
+
   /* tabs */
   .tabs{display:flex;gap:4px;margin-bottom:20px;background:var(--panel);
     padding:4px;border-radius:11px;border:1px solid var(--line-soft);width:max-content}
@@ -125,7 +133,11 @@
   <header>
     <div class="brand">
       <div class="mark">NetFinance · Research</div>
-      <h1>Curvas en vivo <span>· renta fija</span></h1>
+      <h1>Terminal en vivo <span>· mercados</span></h1>
+    </div>
+    <div class="fx" id="fx">
+      <div class="fx-box"><span class="fx-l">Dólar MEP</span><span class="fx-v" id="fx-mep">—</span></div>
+      <div class="fx-box"><span class="fx-l">Dólar CCL</span><span class="fx-v" id="fx-ccl">—</span></div>
     </div>
     <div class="status">
       <div><span class="dot"></span><b id="clock">--:--:--</b> · <span id="asof">—</span></div>
@@ -137,6 +149,10 @@
     <button class="tab on" data-v="pesos">Tasa Fija en Pesos</button>
     <button class="tab" data-v="hd">Soberanos Hard Dólar</button>
     <button class="tab" data-v="acc">Acciones Argentinas</button>
+    <button class="tab" data-v="cer">Bonos CER</button>
+    <button class="tab" data-v="cedears">CEDEARs</button>
+    <button class="tab" data-v="adrs">ADRs</button>
+    <button class="tab" data-v="usa">Acciones EE.UU.</button>
   </div>
 
   <!-- ================= PESOS ================= -->
@@ -202,8 +218,14 @@
     </div>
   </section>
 
+  <!-- ========== PANELES GENÉRICOS (CER / CEDEARs / ADRs / USA) ========== -->
+  <section id="view-cer" class="hidden lista"></section>
+  <section id="view-cedears" class="hidden lista"></section>
+  <section id="view-adrs" class="hidden lista"></section>
+  <section id="view-usa" class="hidden lista"></section>
+
   <footer id="foot">
-    Precios y tasas calculados sobre la fecha de liquidación del día · convención LECAP/BONCAP y TIR act/365 replicadas del modelo interno. · Merval estimado: prom. ponderado por volumen del panel líder. · <b>build 3</b>
+    Precios y tasas calculados sobre la fecha de liquidación del día · convención LECAP/BONCAP y TIR act/365 replicadas del modelo interno. · Merval estimado: prom. ponderado por volumen del panel líder. · <b>build 4</b>
   </footer>
 </div>
 
@@ -379,21 +401,23 @@ function renderHd(data){
       <td>${pct1(r.paridad)}</td><td>${varCell(r.var_pct)}</td></tr>`).join('');
 }
 
-// ---------- ACCIONES ----------
-function renderAcciones(data){
-  feedName=data.feed; setFeedTag(data);
-  const rows=data.rows;
-  const mv=data.merval_est;
-  const mvCls=mv==null?'flat':mv>0?'up':mv<0?'down':'flat';
-  const mvTxt=mv==null?'—':(mv>0?'+':'')+mv.toFixed(2)+'%';
-  $('#kpis-acc').innerHTML=[
-    ['Merval (est.)',`<span class="${mvCls}">${mvTxt}</span>`,'prom. pond. panel líder'],
-    ['Suben / Bajan',`<span class="up">${data.suben}</span> / <span class="down">${data.bajan}</span>`,'del panel líder'],
-    ['Mejor',data.mejor?`<span class="up">${data.mejor.ticker} ${data.mejor.var_pct>0?'+':''}${data.mejor.var_pct.toFixed(2)}%</span>`:'—','del día'],
-    ['Peor',data.peor?`<span class="down">${data.peor.ticker} ${data.peor.var_pct.toFixed(2)}%</span>`:'—','del día'],
-  ].map(k=>`<div class="kpi"><div class="k">${k[0]}</div><div class="v">${k[1]}</div><div class="s">${k[2]}</div></div>`).join('');
+// ---------- PANELES DE ACCIONES / LISTAS (barras + tabla) ----------
+const charts={};
+const fvol=v=>v==null?'<span class="nd">—</span>':v.toLocaleString('es-AR',{maximumFractionDigits:0});
 
-  // gráfico de barras horizontales de variación (ordenado desc)
+function breadthKpis(elId, d, label, sub){
+  const p=d.prom;
+  const cls=p==null?'flat':p>0?'up':p<0?'down':'flat';
+  const txt=p==null?'—':(p>0?'+':'')+p.toFixed(2)+'%';
+  $('#'+elId).innerHTML=[
+    [label,`<span class="${cls}">${txt}</span>`,sub],
+    ['Suben / Bajan',`<span class="up">${d.suben}</span> / <span class="down">${d.bajan}</span>`,'del panel'],
+    ['Mejor',d.mejor?`<span class="up">${d.mejor.ticker} ${d.mejor.var_pct>0?'+':''}${d.mejor.var_pct.toFixed(2)}%</span>`:'—','del día'],
+    ['Peor',d.peor?`<span class="down">${d.peor.ticker} ${d.peor.var_pct.toFixed(2)}%</span>`:'—','del día'],
+  ].map(k=>`<div class="kpi"><div class="k">${k[0]}</div><div class="v">${k[1]}</div><div class="s">${k[2]}</div></div>`).join('');
+}
+
+function barVarChart(canvasId, rows){
   const withVar=rows.filter(r=>r.var_pct!=null);
   const labels=withVar.map(r=>r.ticker);
   const vals=withVar.map(r=>r.var_pct);
@@ -401,28 +425,66 @@ function renderAcciones(data){
   const ds=[{label:'Var. %',data:vals,backgroundColor:colors,borderWidth:0,
     borderRadius:3,barPercentage:.82,categoryPercentage:.86}];
   const opts={indexAxis:'y',responsive:true,maintainAspectRatio:false,
-    scales:{
-      x:{grid:{color:CSS('--line-soft')},border:{color:CSS('--line')},
-         ticks:{callback:v=>v.toFixed(1)+'%'}},
+    scales:{x:{grid:{color:CSS('--line-soft')},border:{color:CSS('--line')},
+        ticks:{callback:v=>v.toFixed(1)+'%'}},
       y:{grid:{display:false},border:{color:CSS('--line')},
-         ticks:{font:{family:CSS('--mono'),size:11}}}},
+        ticks:{font:{family:CSS('--mono'),size:11}}}},
     plugins:{legend:{display:false},
       tooltip:{backgroundColor:'#0a1830',borderColor:CSS('--line'),borderWidth:1,
         titleColor:'#fff',bodyColor:CSS('--ink'),padding:10,displayColors:false,
         callbacks:{label:c=>`${(c.raw>0?'+':'')}${c.raw.toFixed(2)}%`}}}};
   try{
-    if(!chAcc){chAcc=new Chart($('#chart-acc'),{type:'bar',data:{labels,datasets:ds},options:opts});}
-    else{chAcc.data.labels=labels;chAcc.data.datasets=ds;chAcc.options=opts;chAcc.update('none');}
-  }catch(e){console.error('chart acc:',e);}
+    if(!charts[canvasId]){charts[canvasId]=new Chart($('#'+canvasId),{type:'bar',data:{labels,datasets:ds},options:opts});}
+    else{const ch=charts[canvasId];ch.data.labels=labels;ch.data.datasets=ds;ch.options=opts;ch.update('none');}
+  }catch(e){console.error('bar',canvasId,e);}
+}
 
-  // tabla
-  const fvol=v=>v==null?'<span class="nd">—</span>':v.toLocaleString('es-AR',{maximumFractionDigits:0});
-  $('#tbl-acc tbody').innerHTML=rows.map(r=>`
+function panelTable(tblId, rows){
+  $('#'+tblId+' tbody').innerHTML=rows.map(r=>`
     <tr><td class="tk">${r.ticker}</td>
       <td style="text-align:left;color:var(--muted)">${r.nombre}</td>
       <td>${r.precio!=null?num(r.precio,2):'<span class="nd">s/precio</span>'}</td>
       <td>${varCell(r.var_pct)}</td>
       <td>${fvol(r.volumen)}</td></tr>`).join('');
+}
+
+function renderAcciones(data){
+  feedName=data.feed; setFeedTag(data);
+  breadthKpis('kpis-acc',{prom:data.merval_est,suben:data.suben,bajan:data.bajan,mejor:data.mejor,peor:data.peor},
+              'Merval (est.)','prom. pond. panel líder');
+  barVarChart('chart-acc',data.rows);
+  panelTable('tbl-acc',data.rows);
+}
+
+// construye el shell de un panel-lista la primera vez
+function ensureListaShell(key,data){
+  const el=$('#view-'+key);
+  if(el.dataset.built)return;
+  el.dataset.built='1';
+  el.innerHTML=`
+    <div class="kpis" id="kpis-${key}"></div>
+    <div class="card"><div class="card-h">
+      <h2>${data.titulo} <small>${data.sub||''}</small></h2></div>
+      <div class="chart-box" style="height:440px"><canvas id="chart-${key}"></canvas></div></div>
+    <div class="card" style="padding-bottom:2px">
+      <table id="tbl-${key}"><thead><tr>
+        <th>Ticker</th><th>Nombre</th><th>Precio</th><th>Var.</th><th>Volumen</th>
+      </tr></thead><tbody></tbody></table></div>
+    ${data.nota?`<div style="font-family:var(--mono);font-size:11px;color:var(--muted2);margin-top:10px">ℹ ${data.nota}</div>`:''}`;
+}
+
+function renderLista(key,data){
+  feedName=data.feed; setFeedTag(data);
+  ensureListaShell(key,data);
+  breadthKpis('kpis-'+key,{prom:data.prom_pond,suben:data.suben,bajan:data.bajan,mejor:data.mejor,peor:data.peor},
+              'Variación prom.','ponderada por volumen');
+  barVarChart('chart-'+key,data.rows);
+  panelTable('tbl-'+key,data.rows);
+}
+
+function renderFx(d){
+  const set=(id,v)=>{$('#'+id).textContent=v==null?'—':'$ '+v.toLocaleString('es-AR',{maximumFractionDigits:2})};
+  set('fx-mep',d.mep); set('fx-ccl',d.ccl);
 }
 
 function setFeedTag(data){
@@ -431,13 +493,17 @@ function setFeedTag(data){
 }
 
 // ---------- ciclo ----------
+const LISTAS=['cer','cedears','adrs','usa'];
 async function load(){
   try{
-    const [p,h,a]=await Promise.all([
+    const [p,h,a,fx]=await Promise.all([
       fetch('/api/curva-pesos').then(r=>r.json()),
       fetch('/api/curva-hd').then(r=>r.json()),
-      fetch('/api/acciones').then(r=>r.json())]);
-    renderPesos(p); renderHd(h); renderAcciones(a);
+      fetch('/api/acciones').then(r=>r.json()),
+      fetch('/api/fx').then(r=>r.json())]);
+    renderPesos(p); renderHd(h); renderAcciones(a); renderFx(fx);
+    const listas=await Promise.all(LISTAS.map(k=>fetch('/api/lista/'+k).then(r=>r.json())));
+    listas.forEach((d,i)=>renderLista(LISTAS[i],d));
   }catch(e){ console.error(e); $('#asof').textContent='error al cargar el feed'; }
 }
 async function boot(){
@@ -451,9 +517,7 @@ async function boot(){
 $$('.tab').forEach(b=>b.onclick=()=>{
   $$('.tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');
   const v=b.dataset.v;
-  $('#view-pesos').classList.toggle('hidden',v!=='pesos');
-  $('#view-hd').classList.toggle('hidden',v!=='hd');
-  $('#view-acc').classList.toggle('hidden',v!=='acc');
+  $$('section[id^="view-"]').forEach(s=>s.classList.toggle('hidden',s.id!=='view-'+v));
 });
 // toggle TNA/TEM
 $('#tg-pesos').addEventListener('click',e=>{

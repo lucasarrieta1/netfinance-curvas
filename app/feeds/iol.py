@@ -44,9 +44,11 @@ class IOLProvider(FeedProvider):
         self._exp = time.time() + float(j.get("expires_in", 800))
         return self._token
 
-    def fetch(self, symbols: list[str]) -> dict[str, Quote]:
+    def fetch(self) -> dict:
+        from ..instruments import LECAPS, HD_BONDS
+        symbols = [i["feed_symbol"] for i in LECAPS + HD_BONDS]
         headers = {"Authorization": f"Bearer {self._token_get()}"}
-        out: dict[str, Quote] = {}
+        arg_fi: dict = {}
         with httpx.Client(timeout=self.timeout, headers=headers) as c:
             for s in symbols:
                 try:
@@ -55,14 +57,14 @@ class IOLProvider(FeedProvider):
                     d = r.json()
                 except Exception:
                     continue
-                out[s] = Quote(
+                arg_fi[s] = Quote(
                     symbol=s,
                     last=d.get("ultimoPrecio"),
                     bid=(d.get("puntas") or [{}])[0].get("precioCompra") if d.get("puntas") else None,
                     ask=(d.get("puntas") or [{}])[0].get("precioVenta") if d.get("puntas") else None,
-                    prev_close=d.get("cierreAnterior"),
                     var_pct=d.get("variacion"),
                     volume=d.get("volumen"),
                     ts=self._now(),
                 )
-        return out
+        return {"arg_fi": arg_fi, "arg_eq": {}, "arg_cedears": {},
+                "usa_adrs": {}, "usa_stocks": {}}

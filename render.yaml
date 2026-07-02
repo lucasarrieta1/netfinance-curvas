@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: netfinance-curvas
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: FEED
+        value: mock          # cambiá a data912 cuando quieras precios reales
+      - key: REFRESH_SECONDS
+        value: "15"
+      - key: PYTHON_VERSION
+        value: "3.12.6"
