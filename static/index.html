@@ -183,7 +183,7 @@
   </section>
 
   <footer id="foot">
-    Precios y tasas calculados sobre la fecha de liquidación del día · convención LECAP/BONCAP y TIR act/365 replicadas del modelo interno.
+    Precios y tasas calculados sobre la fecha de liquidación del día · convención LECAP/BONCAP y TIR act/365 replicadas del modelo interno. · <b>build 2</b>
   </footer>
 </div>
 
@@ -193,7 +193,9 @@ const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const pct=x=>x==null?'—':(x*100).toFixed(2)+'%';
 const pct1=x=>x==null?'—':(x*100).toFixed(1)+'%';
 const num=(x,d=3)=>x==null?'—':x.toLocaleString('es-AR',{minimumFractionDigits:d,maximumFractionDigits:d});
-const fdate=s=>{if(!s)return'—';const[y,m,d]=s.split('-');return `${d}/${m}/${y.slice(2)}`};
+const fdate=s=>{if(!s)return'—';
+  if(s.includes('/')){const[d,m,y]=s.split('/');return `${d}/${m}/${String(y).slice(2)}`}
+  const[y,m,d]=s.split('-');return `${d}/${m}/${String(y).slice(2)}`};
 const varCell=v=>{if(v==null)return '<span class="nd">—</span>';
   const c=v>0.001?'up':v<-0.001?'down':'flat',a=v>0.001?'▲':v<-0.001?'▼':'·';
   return `<span class="${c}">${a} ${Math.abs(v).toFixed(2)}%</span>`};
@@ -227,6 +229,32 @@ Chart.defaults.color=CSS('--muted');
 Chart.defaults.font.family=CSS('--mono');
 Chart.defaults.font.size=11;
 
+// plugin: dibuja el ticker sobre cada punto (saltea la línea de tendencia)
+const ptLabels={
+  id:'ptLabels',
+  afterDatasetsDraw(chart){
+    const ctx=chart.ctx;
+    ctx.save();
+    ctx.font='600 10px '+CSS('--mono');
+    ctx.textAlign='center';
+    ctx.textBaseline='bottom';
+    chart.data.datasets.forEach((ds,di)=>{
+      if(ds.type==='line')return;                 // no etiquetar la tendencia
+      const meta=chart.getDatasetMeta(di);
+      if(meta.hidden)return;
+      meta.data.forEach((pt,i)=>{
+        const raw=ds.data[i]; if(!raw||!raw.t)return;
+        const x=pt.x, y=pt.y-8;
+        ctx.lineWidth=3; ctx.strokeStyle='rgba(6,16,34,.9)';
+        ctx.strokeText(raw.t,x,y);
+        ctx.fillStyle=CSS('--ink');
+        ctx.fillText(raw.t,x,y);
+      });
+    });
+    ctx.restore();
+  }
+};
+
 function baseScatterOpts(xlabel,ylabel,fmtY){
   return {responsive:true,maintainAspectRatio:false,
     scales:{
@@ -235,7 +263,8 @@ function baseScatterOpts(xlabel,ylabel,fmtY){
       y:{title:{display:true,text:ylabel,color:CSS('--muted')},
          grid:{color:CSS('--line-soft')},border:{color:CSS('--line')},
          ticks:{callback:fmtY}}},
-    plugins:{legend:{display:true,labels:{usePointStyle:true,boxWidth:7,padding:14}},
+    plugins:{legend:{display:true,labels:{usePointStyle:true,boxWidth:7,padding:14,
+        filter:item=>!/^Tendencia/.test(item.text)}},
       tooltip:{backgroundColor:'#0a1830',borderColor:CSS('--line'),borderWidth:1,
         titleColor:'#fff',bodyColor:CSS('--ink'),padding:10,displayColors:false}}}
 }
@@ -264,16 +293,16 @@ function renderPesos(data){
   const trend=trendLine(all.map(a=>a[0]),all.map(a=>a[1]),2);
   const ds=[
     {type:'line',label:'Tendencia (pol. gr.2)',data:trend,parsing:false,
-      borderColor:CSS('--gold'),borderWidth:2,borderDash:[6,4],pointRadius:0,tension:.25,fill:false},
+      borderColor:'#ffffff',borderWidth:2,borderDash:[6,4],pointRadius:0,tension:.25,fill:false},
     {label:'LECAP',data:lec,parsing:false,backgroundColor:CSS('--blue'),
       pointRadius:5,pointHoverRadius:7,borderColor:'#0a1830',borderWidth:1},
     {label:'BONCAP',data:bon,parsing:false,backgroundColor:CSS('--gold'),
       pointStyle:'rectRot',pointRadius:6,pointHoverRadius:8,borderColor:'#0a1830',borderWidth:1},
   ];
-  const opts=baseScatterOpts('días al vencimiento',key.toUpperCase(),v=>(v*100).toFixed(0)+'%');
+  const opts=baseScatterOpts('días al vencimiento',key.toUpperCase(),v=>(v*100).toFixed(1)+'%');
   opts.plugins.tooltip.callbacks={label:c=>c.raw.t?`${c.raw.t}: ${(c.raw.y*100).toFixed(2)}% · ${c.raw.x}d`:''};
   try{
-    if(!chPesos){chPesos=new Chart($('#chart-pesos'),{type:'scatter',data:{datasets:ds},options:opts});}
+    if(!chPesos){chPesos=new Chart($('#chart-pesos'),{type:'scatter',data:{datasets:ds},options:opts,plugins:[ptLabels]});}
     else{chPesos.data.datasets=ds;chPesos.options=opts;chPesos.update('none');}
   }catch(e){console.error('chart pesos:',e);}
 
@@ -308,14 +337,14 @@ function renderHd(data){
   const ny=grp(r=>/^GD/.test(r.ticker),CSS('--teal'),'triangle');ny.label='Ley NY';
   const trend=trendLine(rows.map(r=>r.md),rows.map(r=>r.tir),2);
   const ds=[
-    {type:'line',label:'Tendencia',data:trend,parsing:false,borderColor:CSS('--gold'),
+    {type:'line',label:'Tendencia',data:trend,parsing:false,borderColor:'#ffffff',
       borderWidth:2,borderDash:[6,4],pointRadius:0,tension:.3},
     ar,ny
   ];
-  const opts=baseScatterOpts('modified duration (años)','TIR',v=>(v*100).toFixed(0)+'%');
+  const opts=baseScatterOpts('modified duration (años)','TIR',v=>(v*100).toFixed(1)+'%');
   opts.plugins.tooltip.callbacks={label:c=>c.raw.t?`${c.raw.t}: TIR ${(c.raw.y*100).toFixed(2)}% · MD ${c.raw.x.toFixed(2)}`:''};
   try{
-    if(!chHd){chHd=new Chart($('#chart-hd'),{type:'scatter',data:{datasets:ds},options:opts});}
+    if(!chHd){chHd=new Chart($('#chart-hd'),{type:'scatter',data:{datasets:ds},options:opts,plugins:[ptLabels]});}
     else{chHd.data.datasets=ds;chHd.options=opts;chHd.update('none');}
   }catch(e){console.error('chart hd:',e);}
 
