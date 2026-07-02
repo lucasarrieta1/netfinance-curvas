@@ -272,8 +272,10 @@ function renderPesos(data){
   ];
   const opts=baseScatterOpts('días al vencimiento',key.toUpperCase(),v=>(v*100).toFixed(0)+'%');
   opts.plugins.tooltip.callbacks={label:c=>c.raw.t?`${c.raw.t}: ${(c.raw.y*100).toFixed(2)}% · ${c.raw.x}d`:''};
-  if(!chPesos){chPesos=new Chart($('#chart-pesos'),{data:{datasets:ds},options:opts});}
-  else{chPesos.data.datasets=ds;chPesos.options=opts;chPesos.update('none');}
+  try{
+    if(!chPesos){chPesos=new Chart($('#chart-pesos'),{type:'scatter',data:{datasets:ds},options:opts});}
+    else{chPesos.data.datasets=ds;chPesos.options=opts;chPesos.update('none');}
+  }catch(e){console.error('chart pesos:',e);}
 
   // table
   const tb=$('#tbl-pesos tbody');
@@ -312,8 +314,10 @@ function renderHd(data){
   ];
   const opts=baseScatterOpts('modified duration (años)','TIR',v=>(v*100).toFixed(0)+'%');
   opts.plugins.tooltip.callbacks={label:c=>c.raw.t?`${c.raw.t}: TIR ${(c.raw.y*100).toFixed(2)}% · MD ${c.raw.x.toFixed(2)}`:''};
-  if(!chHd){chHd=new Chart($('#chart-hd'),{data:{datasets:ds},options:opts});}
-  else{chHd.data.datasets=ds;chHd.options=opts;chHd.update('none');}
+  try{
+    if(!chHd){chHd=new Chart($('#chart-hd'),{type:'scatter',data:{datasets:ds},options:opts});}
+    else{chHd.data.datasets=ds;chHd.options=opts;chHd.update('none');}
+  }catch(e){console.error('chart hd:',e);}
 
   const bcls=t=>/^GD/.test(t)?'b-ny':/^BP/.test(t)?'b-bo':'b-ar';
   const blab=t=>/^GD/.test(t)?'NY':/^BP/.test(t)?'BOPREAL':'AR';
