@@ -2,7 +2,7 @@
 Backend NetFinance — Terminal en vivo.
 
 Pestañas: Tasa Fija en Pesos · Soberanos Hard Dólar · Acciones Argentinas ·
-Bonos CER · CEDEARs · ADRs · Acciones EE.UU. — todo sobre el mismo feed.
+CEDEARs · ADRs · Acciones EE.UU. — todo sobre el mismo feed.
 
 Ejecutar:
     uvicorn app.main:app --reload --port 8000
@@ -144,7 +144,7 @@ def acciones():
 
 @app.get("/api/lista/{key}")
 def lista(key: str):
-    """Panel genérico de precio + variación (CER, CEDEARs, ADRs, USA)."""
+    """Panel genérico de precio + variación (CEDEARs, ADRs, USA)."""
     cfg = LISTAS.get(key)
     if not cfg:
         raise HTTPException(404, f"lista '{key}' no existe")
@@ -158,7 +158,9 @@ def lista(key: str):
     b = _breadth(rows)
     rows.sort(key=lambda r: (r["var_pct"] is None, -(r["var_pct"] or 0)))
     return {"tipo": key, "titulo": cfg["titulo"], "sub": cfg["sub"],
-            "nota": cfg.get("nota"), "feed": FEED, "asof": _asof(),
+            "nota": cfg.get("nota"), "index_label": cfg.get("index_label", "Variación prom."),
+            "index_sub": cfg.get("index_sub", "ponderada por volumen"),
+            "feed": FEED, "asof": _asof(),
             "suben": b["suben"], "bajan": b["bajan"], "prom_pond": b["prom_pond"],
             "mejor": b["mejor"], "peor": b["peor"], "rows": rows}
 
