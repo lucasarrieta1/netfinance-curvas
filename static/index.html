@@ -50,13 +50,14 @@
   .feed-tag.mock{color:var(--gold);border-color:#5a4a1e}
   .feed-tag.byma,.feed-tag.iol{color:var(--pos);border-color:#1e5a3a}
 
-  .fx{display:flex;gap:10px;align-items:center;order:2}
+  .brand-wrap{display:flex;align-items:flex-end;gap:22px;flex-wrap:wrap}
+  .fx{display:flex;gap:10px;align-items:center;padding-bottom:2px}
   .fx-box{display:flex;flex-direction:column;gap:1px;padding:6px 12px;
     background:linear-gradient(180deg,var(--panel2),var(--panel));
-    border:1px solid var(--line-soft);border-radius:9px;min-width:96px}
+    border:1px solid var(--line-soft);border-radius:9px;min-width:92px}
   .fx-l{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
   .fx-v{font-family:var(--mono);font-size:16px;font-weight:600;letter-spacing:-.01em}
-  @media(max-width:820px){.fx{order:3;width:100%}.fx-box{flex:1}}
+  @media(max-width:820px){.fx{width:100%}.fx-box{flex:1}}
 
   /* tabs */
   .tabs{display:flex;gap:4px;margin-bottom:20px;background:var(--panel);
@@ -131,13 +132,15 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="brand">
-      <div class="mark">NetFinance · Research</div>
-      <h1>Terminal en vivo <span>· mercados</span></h1>
-    </div>
-    <div class="fx" id="fx">
-      <div class="fx-box"><span class="fx-l">Dólar MEP</span><span class="fx-v" id="fx-mep">—</span></div>
-      <div class="fx-box"><span class="fx-l">Dólar CCL</span><span class="fx-v" id="fx-ccl">—</span></div>
+    <div class="brand-wrap">
+      <div class="brand">
+        <div class="mark">NetFinance · Research</div>
+        <h1>Terminal en vivo <span>· mercados</span></h1>
+      </div>
+      <div class="fx" id="fx">
+        <div class="fx-box"><span class="fx-l">Dólar MEP</span><span class="fx-v" id="fx-mep">—</span></div>
+        <div class="fx-box"><span class="fx-l">Dólar CCL</span><span class="fx-v" id="fx-ccl">—</span></div>
+      </div>
     </div>
     <div class="status">
       <div><span class="dot"></span><b id="clock">--:--:--</b> · <span id="asof">—</span></div>
@@ -149,7 +152,6 @@
     <button class="tab on" data-v="pesos">Tasa Fija en Pesos</button>
     <button class="tab" data-v="hd">Soberanos Hard Dólar</button>
     <button class="tab" data-v="acc">Acciones Argentinas</button>
-    <button class="tab" data-v="cer">Bonos CER</button>
     <button class="tab" data-v="cedears">CEDEARs</button>
     <button class="tab" data-v="adrs">ADRs</button>
     <button class="tab" data-v="usa">Acciones EE.UU.</button>
@@ -202,12 +204,6 @@
   <!-- ================= ACCIONES ================= -->
   <section id="view-acc" class="hidden">
     <div class="kpis" id="kpis-acc"></div>
-    <div class="card">
-      <div class="card-h">
-        <h2>Panel líder <small>variación del día · S&amp;P Merval</small></h2>
-      </div>
-      <div class="chart-box" style="height:420px"><canvas id="chart-acc"></canvas></div>
-    </div>
     <div class="card" style="padding-bottom:2px">
       <table id="tbl-acc">
         <thead><tr>
@@ -216,16 +212,21 @@
         <tbody></tbody>
       </table>
     </div>
+    <div class="card">
+      <div class="card-h">
+        <h2>Mayores subas y bajas <small>variación del día · panel líder</small></h2>
+      </div>
+      <div class="chart-box" style="height:420px"><canvas id="chart-acc"></canvas></div>
+    </div>
   </section>
 
-  <!-- ========== PANELES GENÉRICOS (CER / CEDEARs / ADRs / USA) ========== -->
-  <section id="view-cer" class="hidden lista"></section>
+  <!-- ========== PANELES GENÉRICOS (CEDEARs / ADRs / USA) ========== -->
   <section id="view-cedears" class="hidden lista"></section>
   <section id="view-adrs" class="hidden lista"></section>
   <section id="view-usa" class="hidden lista"></section>
 
   <footer id="foot">
-    Precios y tasas calculados sobre la fecha de liquidación del día · convención LECAP/BONCAP y TIR act/365 replicadas del modelo interno. · Merval estimado: prom. ponderado por volumen del panel líder. · <b>build 4</b>
+    Precios y tasas calculados sobre la fecha de liquidación del día · convención LECAP/BONCAP y TIR act/365 replicadas del modelo interno. · Merval estimado: prom. ponderado por volumen del panel líder. · <b>build 5</b>
   </footer>
 </div>
 
@@ -463,13 +464,13 @@ function ensureListaShell(key,data){
   el.dataset.built='1';
   el.innerHTML=`
     <div class="kpis" id="kpis-${key}"></div>
-    <div class="card"><div class="card-h">
-      <h2>${data.titulo} <small>${data.sub||''}</small></h2></div>
-      <div class="chart-box" style="height:440px"><canvas id="chart-${key}"></canvas></div></div>
     <div class="card" style="padding-bottom:2px">
       <table id="tbl-${key}"><thead><tr>
         <th>Ticker</th><th>Nombre</th><th>Precio</th><th>Var.</th><th>Volumen</th>
       </tr></thead><tbody></tbody></table></div>
+    <div class="card"><div class="card-h">
+      <h2>Mayores subas y bajas <small>${data.titulo} · variación del día</small></h2></div>
+      <div class="chart-box" style="height:440px"><canvas id="chart-${key}"></canvas></div></div>
     ${data.nota?`<div style="font-family:var(--mono);font-size:11px;color:var(--muted2);margin-top:10px">ℹ ${data.nota}</div>`:''}`;
 }
 
@@ -477,7 +478,7 @@ function renderLista(key,data){
   feedName=data.feed; setFeedTag(data);
   ensureListaShell(key,data);
   breadthKpis('kpis-'+key,{prom:data.prom_pond,suben:data.suben,bajan:data.bajan,mejor:data.mejor,peor:data.peor},
-              'Variación prom.','ponderada por volumen');
+              data.index_label||'Variación prom.', data.index_sub||'ponderada por volumen');
   barVarChart('chart-'+key,data.rows);
   panelTable('tbl-'+key,data.rows);
 }
@@ -493,7 +494,7 @@ function setFeedTag(data){
 }
 
 // ---------- ciclo ----------
-const LISTAS=['cer','cedears','adrs','usa'];
+const LISTAS=['cedears','adrs','usa'];
 async function load(){
   try{
     const [p,h,a,fx]=await Promise.all([
