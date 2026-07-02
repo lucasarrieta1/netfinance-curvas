@@ -1,0 +1,4201 @@
+{
+ "AO27": {
+  "ticker": "AO27",
+  "ley": "Argentina (local)",
+  "moneda": "USD",
+  "emision": "31/03/2026",
+  "vencimiento": "29/10/2027",
+  "cupon": "6,00% TNA, pago mensual (0,50%/mes)",
+  "amortizacion": "Íntegra al vencimiento (bullet)",
+  "ref_precio_limpio": 102.3,
+  "ref_tir": 0.04298757016658783,
+  "ref_md": 1.230663659239859,
+  "ref_paridad": 1.0228295284119313,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2026-04-29",
+    "n": 1,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-05-29",
+    "n": 2,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-06-29",
+    "n": 3,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-29",
+    "n": 4,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2026-08-29",
+    "n": 5,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2026-09-29",
+    "n": 6,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2026-10-29",
+    "n": 7,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2026-11-29",
+    "n": 8,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2026-12-29",
+    "n": 9,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-29",
+    "n": 10,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-02-28",
+    "n": 11,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-03-29",
+    "n": 12,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-04-29",
+    "n": 13,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-05-29",
+    "n": 14,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-06-29",
+    "n": 15,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-29",
+    "n": 16,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-08-29",
+    "n": 17,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-09-29",
+    "n": 18,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-10-29",
+    "n": 19,
+    "renta": 0.5,
+    "amort_usd": 100,
+    "flujo_total": 100.5,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "AO28": {
+  "ticker": "AO28",
+  "ley": "Argentina (local)",
+  "moneda": "USD",
+  "emision": "31/03/2026",
+  "vencimiento": "31/10/2028",
+  "cupon": "6,00% TNA, pago mensual (0,50%/mes)",
+  "amortizacion": "Íntegra al vencimiento (bullet)",
+  "ref_precio_limpio": 96.9,
+  "ref_tir": 0.07689663469791412,
+  "ref_md": 2.0299484229990497,
+  "ref_paridad": 0.9690000000000001,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2026-04-30",
+    "n": 1,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-05-31",
+    "n": 2,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-06-30",
+    "n": 3,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-31",
+    "n": 4,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2026-08-31",
+    "n": 5,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2026-09-30",
+    "n": 6,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2026-10-31",
+    "n": 7,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2026-11-30",
+    "n": 8,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2026-12-31",
+    "n": 9,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-31",
+    "n": 10,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-02-28",
+    "n": 11,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-03-31",
+    "n": 12,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-04-30",
+    "n": 13,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-05-31",
+    "n": 14,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-06-30",
+    "n": 15,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-31",
+    "n": 16,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-08-31",
+    "n": 17,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-09-30",
+    "n": 18,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-10-31",
+    "n": 19,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-11-30",
+    "n": 20,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-12-31",
+    "n": 21,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-31",
+    "n": 22,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-02-29",
+    "n": 23,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-03-31",
+    "n": 24,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-04-30",
+    "n": 25,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-05-31",
+    "n": 26,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-06-30",
+    "n": 27,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-31",
+    "n": 28,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-08-31",
+    "n": 29,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-09-30",
+    "n": 30,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-10-31",
+    "n": 31,
+    "renta": 0.5,
+    "amort_usd": 100,
+    "flujo_total": 100.5,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "AL29": {
+  "ticker": "AL29",
+  "ley": "Argentina (local)",
+  "moneda": "USD",
+  "emision": "04/09/2020",
+  "vencimiento": "09/07/2029",
+  "cupon": "1,00% fijo, semestral (9/1 y 9/7)",
+  "amortizacion": "10 cuotas semestrales del 10% (9/1/2025 a 9/7/2029)",
+  "ref_precio_limpio": 64.71,
+  "ref_tir": 0.06475212275981902,
+  "ref_md": 1.366484183724075,
+  "ref_paridad": 0.920058294529556,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2021-07-09",
+    "n": 1,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-01-09",
+    "n": 2,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-07-09",
+    "n": 3,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-01-09",
+    "n": 4,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-07-09",
+    "n": 5,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-01-09",
+    "n": 6,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-07-09",
+    "n": 7,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-01-09",
+    "n": 8,
+    "renta": 0.5,
+    "amort_usd": 10,
+    "flujo_total": 10.5,
+    "valor_residual": 90,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-07-09",
+    "n": 9,
+    "renta": 0.45,
+    "amort_usd": 10,
+    "flujo_total": 10.45,
+    "valor_residual": 80,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-01-09",
+    "n": 10,
+    "renta": 0.4,
+    "amort_usd": 10,
+    "flujo_total": 10.4,
+    "valor_residual": 70,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-09",
+    "n": 11,
+    "renta": 0.35,
+    "amort_usd": 10,
+    "flujo_total": 10.35,
+    "valor_residual": 60,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-09",
+    "n": 12,
+    "renta": 0.3,
+    "amort_usd": 10,
+    "flujo_total": 10.3,
+    "valor_residual": 50,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-09",
+    "n": 13,
+    "renta": 0.25,
+    "amort_usd": 10,
+    "flujo_total": 10.25,
+    "valor_residual": 40,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-09",
+    "n": 14,
+    "renta": 0.2,
+    "amort_usd": 10,
+    "flujo_total": 10.2,
+    "valor_residual": 30,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-09",
+    "n": 15,
+    "renta": 0.15,
+    "amort_usd": 10,
+    "flujo_total": 10.15,
+    "valor_residual": 20,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-01-09",
+    "n": 16,
+    "renta": 0.1,
+    "amort_usd": 10,
+    "flujo_total": 10.1,
+    "valor_residual": 10,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-07-09",
+    "n": 17,
+    "renta": 0.05,
+    "amort_usd": 10,
+    "flujo_total": 10.05,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "AL30": {
+  "ticker": "AL30",
+  "ley": "Argentina (local)",
+  "moneda": "USD",
+  "emision": "04/09/2020",
+  "vencimiento": "09/07/2030",
+  "cupon": "Step-up 0,125/0,50/0,75/1,75%, semestral",
+  "amortizacion": "13 cuotas (1ª 4%, resto 8%), 9/7/2024 a 9/7/2030",
+  "ref_precio_limpio": 64.18,
+  "ref_tir": 0.07455823719501496,
+  "ref_md": 1.7687629557639672,
+  "ref_paridad": 0.8882245887913198,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2021-07-09",
+    "n": 1,
+    "renta": 0.0625,
+    "amort_usd": 0,
+    "flujo_total": 0.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-01-09",
+    "n": 2,
+    "renta": 0.25,
+    "amort_usd": 0,
+    "flujo_total": 0.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-07-09",
+    "n": 3,
+    "renta": 0.25,
+    "amort_usd": 0,
+    "flujo_total": 0.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-01-09",
+    "n": 4,
+    "renta": 0.25,
+    "amort_usd": 0,
+    "flujo_total": 0.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-07-09",
+    "n": 5,
+    "renta": 0.25,
+    "amort_usd": 0,
+    "flujo_total": 0.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-01-09",
+    "n": 6,
+    "renta": 0.375,
+    "amort_usd": 0,
+    "flujo_total": 0.375,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-07-09",
+    "n": 7,
+    "renta": 0.375,
+    "amort_usd": 4,
+    "flujo_total": 4.375,
+    "valor_residual": 96,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-01-09",
+    "n": 8,
+    "renta": 0.36,
+    "amort_usd": 8,
+    "flujo_total": 8.36,
+    "valor_residual": 88,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-07-09",
+    "n": 9,
+    "renta": 0.33,
+    "amort_usd": 8,
+    "flujo_total": 8.33,
+    "valor_residual": 80,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-01-09",
+    "n": 10,
+    "renta": 0.3,
+    "amort_usd": 8,
+    "flujo_total": 8.3,
+    "valor_residual": 72,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-09",
+    "n": 11,
+    "renta": 0.27,
+    "amort_usd": 8,
+    "flujo_total": 8.27,
+    "valor_residual": 64,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-09",
+    "n": 12,
+    "renta": 0.24,
+    "amort_usd": 8,
+    "flujo_total": 8.24,
+    "valor_residual": 56,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-09",
+    "n": 13,
+    "renta": 0.21,
+    "amort_usd": 8,
+    "flujo_total": 8.21,
+    "valor_residual": 48,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-09",
+    "n": 14,
+    "renta": 0.42,
+    "amort_usd": 8,
+    "flujo_total": 8.42,
+    "valor_residual": 40,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-09",
+    "n": 15,
+    "renta": 0.35,
+    "amort_usd": 8,
+    "flujo_total": 8.35,
+    "valor_residual": 32,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-01-09",
+    "n": 16,
+    "renta": 0.28,
+    "amort_usd": 8,
+    "flujo_total": 8.28,
+    "valor_residual": 24,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-07-09",
+    "n": 17,
+    "renta": 0.21,
+    "amort_usd": 8,
+    "flujo_total": 8.21,
+    "valor_residual": 16,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-01-09",
+    "n": 18,
+    "renta": 0.14,
+    "amort_usd": 8,
+    "flujo_total": 8.14,
+    "valor_residual": 8,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-07-09",
+    "n": 19,
+    "renta": 0.07,
+    "amort_usd": 8,
+    "flujo_total": 8.07,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "AN29": {
+  "ticker": "AN29",
+  "ley": "Argentina (local)",
+  "moneda": "USD",
+  "emision": "12/12/2025",
+  "vencimiento": "30/11/2029",
+  "cupon": "6,50% anual, semestral (30/5 y 30/11)",
+  "amortizacion": "Íntegra al vencimiento (bullet)",
+  "ref_precio_limpio": 95.35,
+  "ref_tir": 0.08232083618640901,
+  "ref_md": 2.862754359661921,
+  "ref_paridad": 0.9483630335681723,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2026-05-30",
+    "n": 1,
+    "renta": 3.25,
+    "amort_usd": 0,
+    "flujo_total": 3.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-11-30",
+    "n": 2,
+    "renta": 3.25,
+    "amort_usd": 0,
+    "flujo_total": 3.25,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-05-30",
+    "n": 3,
+    "renta": 3.25,
+    "amort_usd": 0,
+    "flujo_total": 3.25,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-11-30",
+    "n": 4,
+    "renta": 3.25,
+    "amort_usd": 0,
+    "flujo_total": 3.25,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-05-30",
+    "n": 5,
+    "renta": 3.25,
+    "amort_usd": 0,
+    "flujo_total": 3.25,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-11-30",
+    "n": 6,
+    "renta": 3.25,
+    "amort_usd": 0,
+    "flujo_total": 3.25,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-05-30",
+    "n": 7,
+    "renta": 3.25,
+    "amort_usd": 0,
+    "flujo_total": 3.25,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-11-30",
+    "n": 8,
+    "renta": 3.25,
+    "amort_usd": 100,
+    "flujo_total": 103.25,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "AL35": {
+  "ticker": "AL35",
+  "ley": "Argentina (local)",
+  "moneda": "USD",
+  "emision": "04/09/2020",
+  "vencimiento": "09/07/2035",
+  "cupon": "Step-up hasta 5,00%, semestral",
+  "amortizacion": "10 cuotas semestrales del 10% (9/1/2031 a 9/7/2035)",
+  "ref_precio_limpio": 81.3,
+  "ref_tir": 0.08685358464717867,
+  "ref_md": 5.1161216122491115,
+  "ref_paridad": 0.7973764060440739,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2021-07-09",
+    "n": 1,
+    "renta": 0.0625,
+    "amort_usd": 0,
+    "flujo_total": 0.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-01-09",
+    "n": 2,
+    "renta": 0.5625,
+    "amort_usd": 0,
+    "flujo_total": 0.5625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-07-09",
+    "n": 3,
+    "renta": 0.5625,
+    "amort_usd": 0,
+    "flujo_total": 0.5625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-01-09",
+    "n": 4,
+    "renta": 0.75,
+    "amort_usd": 0,
+    "flujo_total": 0.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-07-09",
+    "n": 5,
+    "renta": 0.75,
+    "amort_usd": 0,
+    "flujo_total": 0.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-01-09",
+    "n": 6,
+    "renta": 1.8125,
+    "amort_usd": 0,
+    "flujo_total": 1.8125,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-07-09",
+    "n": 7,
+    "renta": 1.8125,
+    "amort_usd": 0,
+    "flujo_total": 1.8125,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-01-09",
+    "n": 8,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-07-09",
+    "n": 9,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-01-09",
+    "n": 10,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-09",
+    "n": 11,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-09",
+    "n": 12,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-09",
+    "n": 13,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-09",
+    "n": 14,
+    "renta": 2.375,
+    "amort_usd": 0,
+    "flujo_total": 2.375,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-09",
+    "n": 15,
+    "renta": 2.375,
+    "amort_usd": 0,
+    "flujo_total": 2.375,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-01-09",
+    "n": 16,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-07-09",
+    "n": 17,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-01-09",
+    "n": 18,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-07-09",
+    "n": 19,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-01-09",
+    "n": 20,
+    "renta": 2.5,
+    "amort_usd": 10,
+    "flujo_total": 12.5,
+    "valor_residual": 90,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-07-09",
+    "n": 21,
+    "renta": 2.25,
+    "amort_usd": 10,
+    "flujo_total": 12.25,
+    "valor_residual": 80,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-01-09",
+    "n": 22,
+    "renta": 2,
+    "amort_usd": 10,
+    "flujo_total": 12,
+    "valor_residual": 70,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-07-09",
+    "n": 23,
+    "renta": 1.75,
+    "amort_usd": 10,
+    "flujo_total": 11.75,
+    "valor_residual": 60,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-01-09",
+    "n": 24,
+    "renta": 1.5,
+    "amort_usd": 10,
+    "flujo_total": 11.5,
+    "valor_residual": 50,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-07-09",
+    "n": 25,
+    "renta": 1.25,
+    "amort_usd": 10,
+    "flujo_total": 11.25,
+    "valor_residual": 40,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-01-09",
+    "n": 26,
+    "renta": 1,
+    "amort_usd": 10,
+    "flujo_total": 11,
+    "valor_residual": 30,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-07-09",
+    "n": 27,
+    "renta": 0.75,
+    "amort_usd": 10,
+    "flujo_total": 10.75,
+    "valor_residual": 20,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-01-09",
+    "n": 28,
+    "renta": 0.5,
+    "amort_usd": 10,
+    "flujo_total": 10.5,
+    "valor_residual": 10,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-07-09",
+    "n": 29,
+    "renta": 0.25,
+    "amort_usd": 10,
+    "flujo_total": 10.25,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "AE38": {
+  "ticker": "AE38",
+  "ley": "Argentina (local)",
+  "moneda": "USD",
+  "emision": "04/09/2020",
+  "vencimiento": "09/01/2038",
+  "cupon": "Step-up hasta 5,00%, semestral",
+  "amortizacion": "22 cuotas semestrales iguales (9/7/2027 a 9/1/2038)",
+  "ref_precio_limpio": 84.38,
+  "ref_tir": 0.08599360287189485,
+  "ref_md": 4.443191494303941,
+  "ref_paridad": 0.8242246642246637,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2021-07-09",
+    "n": 1,
+    "renta": 0.0625,
+    "amort_usd": 0,
+    "flujo_total": 0.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-01-09",
+    "n": 2,
+    "renta": 1,
+    "amort_usd": 0,
+    "flujo_total": 1,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-07-09",
+    "n": 3,
+    "renta": 1,
+    "amort_usd": 0,
+    "flujo_total": 1,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-01-09",
+    "n": 4,
+    "renta": 1.9375,
+    "amort_usd": 0,
+    "flujo_total": 1.9375,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-07-09",
+    "n": 5,
+    "renta": 1.9375,
+    "amort_usd": 0,
+    "flujo_total": 1.9375,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-01-09",
+    "n": 6,
+    "renta": 2.125,
+    "amort_usd": 0,
+    "flujo_total": 2.125,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-07-09",
+    "n": 7,
+    "renta": 2.125,
+    "amort_usd": 0,
+    "flujo_total": 2.125,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-01-09",
+    "n": 8,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-07-09",
+    "n": 9,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-01-09",
+    "n": 10,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-09",
+    "n": 11,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-09",
+    "n": 12,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-09",
+    "n": 13,
+    "renta": 2.5,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 7.045454545454549,
+    "valor_residual": 95.45454545454545,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-09",
+    "n": 14,
+    "renta": 2.3864,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.9318545454545495,
+    "valor_residual": 90.9090909090909,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-09",
+    "n": 15,
+    "renta": 2.2727,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.818154545454549,
+    "valor_residual": 86.36363636363636,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-01-09",
+    "n": 16,
+    "renta": 2.1591,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.704554545454549,
+    "valor_residual": 81.81818181818181,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-07-09",
+    "n": 17,
+    "renta": 2.0455,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.590954545454549,
+    "valor_residual": 77.27272727272727,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-01-09",
+    "n": 18,
+    "renta": 1.9318,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.477254545454549,
+    "valor_residual": 72.72727272727272,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-07-09",
+    "n": 19,
+    "renta": 1.8182,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.3636545454545494,
+    "valor_residual": 68.18181818181817,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-01-09",
+    "n": 20,
+    "renta": 1.7045,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.24995454545455,
+    "valor_residual": 63.636363636363626,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-07-09",
+    "n": 21,
+    "renta": 1.5909,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.13635454545455,
+    "valor_residual": 59.09090909090908,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-01-09",
+    "n": 22,
+    "renta": 1.4773,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.02275454545455,
+    "valor_residual": 54.54545454545453,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-07-09",
+    "n": 23,
+    "renta": 1.3636,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.909054545454549,
+    "valor_residual": 49.999999999999986,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-01-09",
+    "n": 24,
+    "renta": 1.25,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.795454545454549,
+    "valor_residual": 45.45454545454544,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-07-09",
+    "n": 25,
+    "renta": 1.1364,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.6818545454545495,
+    "valor_residual": 40.90909090909089,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-01-09",
+    "n": 26,
+    "renta": 1.0227,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.568154545454549,
+    "valor_residual": 36.363636363636346,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-07-09",
+    "n": 27,
+    "renta": 0.9091,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.454554545454549,
+    "valor_residual": 31.818181818181795,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-01-09",
+    "n": 28,
+    "renta": 0.7955,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.340954545454549,
+    "valor_residual": 27.272727272727245,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-07-09",
+    "n": 29,
+    "renta": 0.6818,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.227254545454549,
+    "valor_residual": 22.727272727272695,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2036-01-09",
+    "n": 30,
+    "renta": 0.5682,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.1136545454545494,
+    "valor_residual": 18.181818181818144,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2036-07-09",
+    "n": 31,
+    "renta": 0.4545,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 4.99995454545455,
+    "valor_residual": 13.636363636363594,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2037-01-09",
+    "n": 32,
+    "renta": 0.3409,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 4.88635454545455,
+    "valor_residual": 9.090909090909044,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2037-07-09",
+    "n": 33,
+    "renta": 0.2273,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 4.772754545454549,
+    "valor_residual": 4.545454545454494,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2038-01-09",
+    "n": 34,
+    "renta": 0.1136,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 4.659054545454549,
+    "valor_residual": -5.5067062021407764e-14,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "AL41": {
+  "ticker": "AL41",
+  "ley": "Argentina (local)",
+  "moneda": "USD",
+  "emision": "04/09/2020",
+  "vencimiento": "09/07/2041",
+  "cupon": "Step-up hasta 4,875%, semestral",
+  "amortizacion": "28 cuotas semestrales iguales (9/1/2028 a 9/7/2041)",
+  "ref_precio_limpio": 77.7,
+  "ref_tir": 0.08407517373561858,
+  "ref_md": 5.721048738258689,
+  "ref_paridad": 0.7642936185909263,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2021-07-09",
+    "n": 1,
+    "renta": 0.0625,
+    "amort_usd": 0,
+    "flujo_total": 0.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-01-09",
+    "n": 2,
+    "renta": 1.25,
+    "amort_usd": 0,
+    "flujo_total": 1.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-07-09",
+    "n": 3,
+    "renta": 1.25,
+    "amort_usd": 0,
+    "flujo_total": 1.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-01-09",
+    "n": 4,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-07-09",
+    "n": 5,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-01-09",
+    "n": 6,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-07-09",
+    "n": 7,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-01-09",
+    "n": 8,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-07-09",
+    "n": 9,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-01-09",
+    "n": 10,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-09",
+    "n": 11,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-09",
+    "n": 12,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-09",
+    "n": 13,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-09",
+    "n": 14,
+    "renta": 1.75,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.321428571428569,
+    "valor_residual": 96.42857142857143,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-09",
+    "n": 15,
+    "renta": 1.6875,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.258928571428569,
+    "valor_residual": 92.85714285714286,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-01-09",
+    "n": 16,
+    "renta": 1.625,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.196428571428569,
+    "valor_residual": 89.28571428571429,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-07-09",
+    "n": 17,
+    "renta": 1.5625,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.133928571428569,
+    "valor_residual": 85.71428571428572,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-01-09",
+    "n": 18,
+    "renta": 2.0893,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.66072857142857,
+    "valor_residual": 82.14285714285715,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-07-09",
+    "n": 19,
+    "renta": 2.0022,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.57362857142857,
+    "valor_residual": 78.57142857142858,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-01-09",
+    "n": 20,
+    "renta": 1.9152,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.48662857142857,
+    "valor_residual": 75.00000000000001,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-07-09",
+    "n": 21,
+    "renta": 1.8281,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.39952857142857,
+    "valor_residual": 71.42857142857144,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-01-09",
+    "n": 22,
+    "renta": 1.7411,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.31252857142857,
+    "valor_residual": 67.85714285714288,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-07-09",
+    "n": 23,
+    "renta": 1.654,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.225428571428569,
+    "valor_residual": 64.2857142857143,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-01-09",
+    "n": 24,
+    "renta": 1.567,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.13842857142857,
+    "valor_residual": 60.71428571428574,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-07-09",
+    "n": 25,
+    "renta": 1.4799,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.05132857142857,
+    "valor_residual": 57.14285714285717,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-01-09",
+    "n": 26,
+    "renta": 1.3929,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.96432857142857,
+    "valor_residual": 53.5714285714286,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-07-09",
+    "n": 27,
+    "renta": 1.3058,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.87722857142857,
+    "valor_residual": 50.00000000000003,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-01-09",
+    "n": 28,
+    "renta": 1.2188,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.79022857142857,
+    "valor_residual": 46.42857142857146,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-07-09",
+    "n": 29,
+    "renta": 1.1317,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.70312857142857,
+    "valor_residual": 42.85714285714289,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2036-01-09",
+    "n": 30,
+    "renta": 1.0446,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.61602857142857,
+    "valor_residual": 39.28571428571432,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2036-07-09",
+    "n": 31,
+    "renta": 0.9576,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.52902857142857,
+    "valor_residual": 35.71428571428575,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2037-01-09",
+    "n": 32,
+    "renta": 0.8705,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.44192857142857,
+    "valor_residual": 32.14285714285718,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2037-07-09",
+    "n": 33,
+    "renta": 0.7835,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.3549285714285695,
+    "valor_residual": 28.571428571428612,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2038-01-09",
+    "n": 34,
+    "renta": 0.6964,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.26782857142857,
+    "valor_residual": 25.000000000000043,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2038-07-09",
+    "n": 35,
+    "renta": 0.6094,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.18082857142857,
+    "valor_residual": 21.428571428571473,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2039-01-09",
+    "n": 36,
+    "renta": 0.5223,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.09372857142857,
+    "valor_residual": 17.857142857142904,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2039-07-09",
+    "n": 37,
+    "renta": 0.4353,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.00672857142857,
+    "valor_residual": 14.285714285714334,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2040-01-09",
+    "n": 38,
+    "renta": 0.3482,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 3.9196285714285697,
+    "valor_residual": 10.714285714285765,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2040-07-09",
+    "n": 39,
+    "renta": 0.2612,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 3.83262857142857,
+    "valor_residual": 7.142857142857196,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2041-01-09",
+    "n": 40,
+    "renta": 0.1741,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 3.74552857142857,
+    "valor_residual": 3.571428571428626,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2041-07-09",
+    "n": 41,
+    "renta": 0.0871,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 3.65852857142857,
+    "valor_residual": 5.595524044110789e-14,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "GD29": {
+  "ticker": "GD29",
+  "ley": "Extranjera (NY)",
+  "moneda": "USD",
+  "emision": "04/09/2020",
+  "vencimiento": "09/07/2029",
+  "cupon": "1,00% fijo, semestral (9/1 y 9/7)",
+  "amortizacion": "10 cuotas semestrales del 10% (9/1/2025 a 9/7/2029)",
+  "ref_precio_limpio": 66.38,
+  "ref_tir": 0.04646835029125214,
+  "ref_md": 1.4069080238220446,
+  "ref_paridad": 0.9438026516901858,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2021-07-09",
+    "n": 1,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-01-09",
+    "n": 2,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-07-09",
+    "n": 3,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-01-09",
+    "n": 4,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-07-09",
+    "n": 5,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-01-09",
+    "n": 6,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-07-09",
+    "n": 7,
+    "renta": 0.5,
+    "amort_usd": 0,
+    "flujo_total": 0.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-01-09",
+    "n": 8,
+    "renta": 0.5,
+    "amort_usd": 10,
+    "flujo_total": 10.5,
+    "valor_residual": 90,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-07-09",
+    "n": 9,
+    "renta": 0.45,
+    "amort_usd": 10,
+    "flujo_total": 10.45,
+    "valor_residual": 80,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-01-09",
+    "n": 10,
+    "renta": 0.4,
+    "amort_usd": 10,
+    "flujo_total": 10.4,
+    "valor_residual": 70,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-09",
+    "n": 11,
+    "renta": 0.35,
+    "amort_usd": 10,
+    "flujo_total": 10.35,
+    "valor_residual": 60,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-09",
+    "n": 12,
+    "renta": 0.3,
+    "amort_usd": 10,
+    "flujo_total": 10.3,
+    "valor_residual": 50,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-09",
+    "n": 13,
+    "renta": 0.25,
+    "amort_usd": 10,
+    "flujo_total": 10.25,
+    "valor_residual": 40,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-09",
+    "n": 14,
+    "renta": 0.2,
+    "amort_usd": 10,
+    "flujo_total": 10.2,
+    "valor_residual": 30,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-09",
+    "n": 15,
+    "renta": 0.15,
+    "amort_usd": 10,
+    "flujo_total": 10.15,
+    "valor_residual": 20,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-01-09",
+    "n": 16,
+    "renta": 0.1,
+    "amort_usd": 10,
+    "flujo_total": 10.1,
+    "valor_residual": 10,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-07-09",
+    "n": 17,
+    "renta": 0.05,
+    "amort_usd": 10,
+    "flujo_total": 10.05,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "GD30": {
+  "ticker": "GD30",
+  "ley": "Extranjera (NY)",
+  "moneda": "USD",
+  "emision": "04/09/2020",
+  "vencimiento": "09/07/2030",
+  "cupon": "Step-up 0,125/0,50/0,75/1,75%, semestral",
+  "amortizacion": "13 cuotas (1ª 4%, resto 8%), 9/7/2024 a 9/7/2030",
+  "ref_precio_limpio": 66.03,
+  "ref_tir": 0.0587741643190384,
+  "ref_md": 1.8182001111835955,
+  "ref_paridad": 0.9138278217184613,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2021-07-09",
+    "n": 1,
+    "renta": 0.0625,
+    "amort_usd": 0,
+    "flujo_total": 0.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-01-09",
+    "n": 2,
+    "renta": 0.25,
+    "amort_usd": 0,
+    "flujo_total": 0.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-07-09",
+    "n": 3,
+    "renta": 0.25,
+    "amort_usd": 0,
+    "flujo_total": 0.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-01-09",
+    "n": 4,
+    "renta": 0.25,
+    "amort_usd": 0,
+    "flujo_total": 0.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-07-09",
+    "n": 5,
+    "renta": 0.25,
+    "amort_usd": 0,
+    "flujo_total": 0.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-01-09",
+    "n": 6,
+    "renta": 0.375,
+    "amort_usd": 0,
+    "flujo_total": 0.375,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-07-09",
+    "n": 7,
+    "renta": 0.375,
+    "amort_usd": 4,
+    "flujo_total": 4.375,
+    "valor_residual": 96,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-01-09",
+    "n": 8,
+    "renta": 0.36,
+    "amort_usd": 8,
+    "flujo_total": 8.36,
+    "valor_residual": 88,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-07-09",
+    "n": 9,
+    "renta": 0.33,
+    "amort_usd": 8,
+    "flujo_total": 8.33,
+    "valor_residual": 80,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-01-09",
+    "n": 10,
+    "renta": 0.3,
+    "amort_usd": 8,
+    "flujo_total": 8.3,
+    "valor_residual": 72,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-09",
+    "n": 11,
+    "renta": 0.27,
+    "amort_usd": 8,
+    "flujo_total": 8.27,
+    "valor_residual": 64,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-09",
+    "n": 12,
+    "renta": 0.24,
+    "amort_usd": 8,
+    "flujo_total": 8.24,
+    "valor_residual": 56,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-09",
+    "n": 13,
+    "renta": 0.21,
+    "amort_usd": 8,
+    "flujo_total": 8.21,
+    "valor_residual": 48,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-09",
+    "n": 14,
+    "renta": 0.42,
+    "amort_usd": 8,
+    "flujo_total": 8.42,
+    "valor_residual": 40,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-09",
+    "n": 15,
+    "renta": 0.35,
+    "amort_usd": 8,
+    "flujo_total": 8.35,
+    "valor_residual": 32,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-01-09",
+    "n": 16,
+    "renta": 0.28,
+    "amort_usd": 8,
+    "flujo_total": 8.28,
+    "valor_residual": 24,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-07-09",
+    "n": 17,
+    "renta": 0.21,
+    "amort_usd": 8,
+    "flujo_total": 8.21,
+    "valor_residual": 16,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-01-09",
+    "n": 18,
+    "renta": 0.14,
+    "amort_usd": 8,
+    "flujo_total": 8.14,
+    "valor_residual": 8,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-07-09",
+    "n": 19,
+    "renta": 0.07,
+    "amort_usd": 8,
+    "flujo_total": 8.07,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "GD35": {
+  "ticker": "GD35",
+  "ley": "Extranjera (NY)",
+  "moneda": "USD",
+  "emision": "04/09/2020",
+  "vencimiento": "09/07/2035",
+  "cupon": "Step-up hasta 5,00%, semestral",
+  "amortizacion": "10 cuotas semestrales del 10% (9/1/2031 a 9/7/2035)",
+  "ref_precio_limpio": 84.95,
+  "ref_tir": 0.07853024899959564,
+  "ref_md": 5.1936642358229745,
+  "ref_paridad": 0.8331749777791401,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2021-07-09",
+    "n": 1,
+    "renta": 0.0625,
+    "amort_usd": 0,
+    "flujo_total": 0.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-01-09",
+    "n": 2,
+    "renta": 0.5625,
+    "amort_usd": 0,
+    "flujo_total": 0.5625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-07-09",
+    "n": 3,
+    "renta": 0.5625,
+    "amort_usd": 0,
+    "flujo_total": 0.5625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-01-09",
+    "n": 4,
+    "renta": 0.75,
+    "amort_usd": 0,
+    "flujo_total": 0.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-07-09",
+    "n": 5,
+    "renta": 0.75,
+    "amort_usd": 0,
+    "flujo_total": 0.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-01-09",
+    "n": 6,
+    "renta": 1.8125,
+    "amort_usd": 0,
+    "flujo_total": 1.8125,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-07-09",
+    "n": 7,
+    "renta": 1.8125,
+    "amort_usd": 0,
+    "flujo_total": 1.8125,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-01-09",
+    "n": 8,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-07-09",
+    "n": 9,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-01-09",
+    "n": 10,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-09",
+    "n": 11,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-09",
+    "n": 12,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-09",
+    "n": 13,
+    "renta": 2.0625,
+    "amort_usd": 0,
+    "flujo_total": 2.0625,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-09",
+    "n": 14,
+    "renta": 2.375,
+    "amort_usd": 0,
+    "flujo_total": 2.375,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-09",
+    "n": 15,
+    "renta": 2.375,
+    "amort_usd": 0,
+    "flujo_total": 2.375,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-01-09",
+    "n": 16,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-07-09",
+    "n": 17,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-01-09",
+    "n": 18,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-07-09",
+    "n": 19,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-01-09",
+    "n": 20,
+    "renta": 2.5,
+    "amort_usd": 10,
+    "flujo_total": 12.5,
+    "valor_residual": 90,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-07-09",
+    "n": 21,
+    "renta": 2.25,
+    "amort_usd": 10,
+    "flujo_total": 12.25,
+    "valor_residual": 80,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-01-09",
+    "n": 22,
+    "renta": 2,
+    "amort_usd": 10,
+    "flujo_total": 12,
+    "valor_residual": 70,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-07-09",
+    "n": 23,
+    "renta": 1.75,
+    "amort_usd": 10,
+    "flujo_total": 11.75,
+    "valor_residual": 60,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-01-09",
+    "n": 24,
+    "renta": 1.5,
+    "amort_usd": 10,
+    "flujo_total": 11.5,
+    "valor_residual": 50,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-07-09",
+    "n": 25,
+    "renta": 1.25,
+    "amort_usd": 10,
+    "flujo_total": 11.25,
+    "valor_residual": 40,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-01-09",
+    "n": 26,
+    "renta": 1,
+    "amort_usd": 10,
+    "flujo_total": 11,
+    "valor_residual": 30,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-07-09",
+    "n": 27,
+    "renta": 0.75,
+    "amort_usd": 10,
+    "flujo_total": 10.75,
+    "valor_residual": 20,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-01-09",
+    "n": 28,
+    "renta": 0.5,
+    "amort_usd": 10,
+    "flujo_total": 10.5,
+    "valor_residual": 10,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-07-09",
+    "n": 29,
+    "renta": 0.25,
+    "amort_usd": 10,
+    "flujo_total": 10.25,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "GD38": {
+  "ticker": "GD38",
+  "ley": "Extranjera (NY)",
+  "moneda": "USD",
+  "emision": "04/09/2020",
+  "vencimiento": "09/01/2038",
+  "cupon": "Step-up hasta 5,00%, semestral",
+  "amortizacion": "22 cuotas semestrales iguales (9/7/2027 a 9/1/2038)",
+  "ref_precio_limpio": 88.5,
+  "ref_tir": 0.07570199072360995,
+  "ref_md": 4.573996785759027,
+  "ref_paridad": 0.864468864468864,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2021-07-09",
+    "n": 1,
+    "renta": 0.0625,
+    "amort_usd": 0,
+    "flujo_total": 0.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-01-09",
+    "n": 2,
+    "renta": 1,
+    "amort_usd": 0,
+    "flujo_total": 1,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-07-09",
+    "n": 3,
+    "renta": 1,
+    "amort_usd": 0,
+    "flujo_total": 1,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-01-09",
+    "n": 4,
+    "renta": 1.9375,
+    "amort_usd": 0,
+    "flujo_total": 1.9375,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-07-09",
+    "n": 5,
+    "renta": 1.9375,
+    "amort_usd": 0,
+    "flujo_total": 1.9375,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-01-09",
+    "n": 6,
+    "renta": 2.125,
+    "amort_usd": 0,
+    "flujo_total": 2.125,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-07-09",
+    "n": 7,
+    "renta": 2.125,
+    "amort_usd": 0,
+    "flujo_total": 2.125,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-01-09",
+    "n": 8,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-07-09",
+    "n": 9,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-01-09",
+    "n": 10,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-09",
+    "n": 11,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-09",
+    "n": 12,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-09",
+    "n": 13,
+    "renta": 2.5,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 7.045454545454549,
+    "valor_residual": 95.45454545454545,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-09",
+    "n": 14,
+    "renta": 2.3864,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.9318545454545495,
+    "valor_residual": 90.9090909090909,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-09",
+    "n": 15,
+    "renta": 2.2727,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.818154545454549,
+    "valor_residual": 86.36363636363636,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-01-09",
+    "n": 16,
+    "renta": 2.1591,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.704554545454549,
+    "valor_residual": 81.81818181818181,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-07-09",
+    "n": 17,
+    "renta": 2.0455,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.590954545454549,
+    "valor_residual": 77.27272727272727,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-01-09",
+    "n": 18,
+    "renta": 1.9318,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.477254545454549,
+    "valor_residual": 72.72727272727272,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-07-09",
+    "n": 19,
+    "renta": 1.8182,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.3636545454545494,
+    "valor_residual": 68.18181818181817,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-01-09",
+    "n": 20,
+    "renta": 1.7045,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.24995454545455,
+    "valor_residual": 63.636363636363626,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-07-09",
+    "n": 21,
+    "renta": 1.5909,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.13635454545455,
+    "valor_residual": 59.09090909090908,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-01-09",
+    "n": 22,
+    "renta": 1.4773,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 6.02275454545455,
+    "valor_residual": 54.54545454545453,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-07-09",
+    "n": 23,
+    "renta": 1.3636,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.909054545454549,
+    "valor_residual": 49.999999999999986,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-01-09",
+    "n": 24,
+    "renta": 1.25,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.795454545454549,
+    "valor_residual": 45.45454545454544,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-07-09",
+    "n": 25,
+    "renta": 1.1364,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.6818545454545495,
+    "valor_residual": 40.90909090909089,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-01-09",
+    "n": 26,
+    "renta": 1.0227,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.568154545454549,
+    "valor_residual": 36.363636363636346,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-07-09",
+    "n": 27,
+    "renta": 0.9091,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.454554545454549,
+    "valor_residual": 31.818181818181795,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-01-09",
+    "n": 28,
+    "renta": 0.7955,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.340954545454549,
+    "valor_residual": 27.272727272727245,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-07-09",
+    "n": 29,
+    "renta": 0.6818,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.227254545454549,
+    "valor_residual": 22.727272727272695,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2036-01-09",
+    "n": 30,
+    "renta": 0.5682,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 5.1136545454545494,
+    "valor_residual": 18.181818181818144,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2036-07-09",
+    "n": 31,
+    "renta": 0.4545,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 4.99995454545455,
+    "valor_residual": 13.636363636363594,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2037-01-09",
+    "n": 32,
+    "renta": 0.3409,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 4.88635454545455,
+    "valor_residual": 9.090909090909044,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2037-07-09",
+    "n": 33,
+    "renta": 0.2273,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 4.772754545454549,
+    "valor_residual": 4.545454545454494,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2038-01-09",
+    "n": 34,
+    "renta": 0.1136,
+    "amort_usd": 4.545454545454549,
+    "flujo_total": 4.659054545454549,
+    "valor_residual": -5.5067062021407764e-14,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "GD41": {
+  "ticker": "GD41",
+  "ley": "Extranjera (NY)",
+  "moneda": "USD",
+  "emision": "04/09/2020",
+  "vencimiento": "09/07/2041",
+  "cupon": "Step-up hasta 4,875%, semestral",
+  "amortizacion": "28 cuotas semestrales iguales (9/1/2028 a 9/7/2041)",
+  "ref_precio_limpio": 79.42,
+  "ref_tir": 0.08034982979297638,
+  "ref_md": 5.790099789596155,
+  "ref_paridad": 0.7812123447682285,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2021-07-09",
+    "n": 1,
+    "renta": 0.0625,
+    "amort_usd": 0,
+    "flujo_total": 0.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-01-09",
+    "n": 2,
+    "renta": 1.25,
+    "amort_usd": 0,
+    "flujo_total": 1.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-07-09",
+    "n": 3,
+    "renta": 1.25,
+    "amort_usd": 0,
+    "flujo_total": 1.25,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-01-09",
+    "n": 4,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-07-09",
+    "n": 5,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-01-09",
+    "n": 6,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-07-09",
+    "n": 7,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-01-09",
+    "n": 8,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-07-09",
+    "n": 9,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-01-09",
+    "n": 10,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-09",
+    "n": 11,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-09",
+    "n": 12,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-09",
+    "n": 13,
+    "renta": 1.75,
+    "amort_usd": 0,
+    "flujo_total": 1.75,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-09",
+    "n": 14,
+    "renta": 1.75,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.321428571428569,
+    "valor_residual": 96.42857142857143,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-09",
+    "n": 15,
+    "renta": 1.6875,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.258928571428569,
+    "valor_residual": 92.85714285714286,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-01-09",
+    "n": 16,
+    "renta": 1.625,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.196428571428569,
+    "valor_residual": 89.28571428571429,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-07-09",
+    "n": 17,
+    "renta": 1.5625,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.133928571428569,
+    "valor_residual": 85.71428571428572,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-01-09",
+    "n": 18,
+    "renta": 2.0893,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.66072857142857,
+    "valor_residual": 82.14285714285715,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-07-09",
+    "n": 19,
+    "renta": 2.0022,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.57362857142857,
+    "valor_residual": 78.57142857142858,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-01-09",
+    "n": 20,
+    "renta": 1.9152,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.48662857142857,
+    "valor_residual": 75.00000000000001,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-07-09",
+    "n": 21,
+    "renta": 1.8281,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.39952857142857,
+    "valor_residual": 71.42857142857144,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-01-09",
+    "n": 22,
+    "renta": 1.7411,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.31252857142857,
+    "valor_residual": 67.85714285714288,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-07-09",
+    "n": 23,
+    "renta": 1.654,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.225428571428569,
+    "valor_residual": 64.2857142857143,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-01-09",
+    "n": 24,
+    "renta": 1.567,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.13842857142857,
+    "valor_residual": 60.71428571428574,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-07-09",
+    "n": 25,
+    "renta": 1.4799,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 5.05132857142857,
+    "valor_residual": 57.14285714285717,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-01-09",
+    "n": 26,
+    "renta": 1.3929,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.96432857142857,
+    "valor_residual": 53.5714285714286,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-07-09",
+    "n": 27,
+    "renta": 1.3058,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.87722857142857,
+    "valor_residual": 50.00000000000003,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-01-09",
+    "n": 28,
+    "renta": 1.2188,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.79022857142857,
+    "valor_residual": 46.42857142857146,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-07-09",
+    "n": 29,
+    "renta": 1.1317,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.70312857142857,
+    "valor_residual": 42.85714285714289,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2036-01-09",
+    "n": 30,
+    "renta": 1.0446,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.61602857142857,
+    "valor_residual": 39.28571428571432,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2036-07-09",
+    "n": 31,
+    "renta": 0.9576,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.52902857142857,
+    "valor_residual": 35.71428571428575,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2037-01-09",
+    "n": 32,
+    "renta": 0.8705,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.44192857142857,
+    "valor_residual": 32.14285714285718,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2037-07-09",
+    "n": 33,
+    "renta": 0.7835,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.3549285714285695,
+    "valor_residual": 28.571428571428612,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2038-01-09",
+    "n": 34,
+    "renta": 0.6964,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.26782857142857,
+    "valor_residual": 25.000000000000043,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2038-07-09",
+    "n": 35,
+    "renta": 0.6094,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.18082857142857,
+    "valor_residual": 21.428571428571473,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2039-01-09",
+    "n": 36,
+    "renta": 0.5223,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.09372857142857,
+    "valor_residual": 17.857142857142904,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2039-07-09",
+    "n": 37,
+    "renta": 0.4353,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 4.00672857142857,
+    "valor_residual": 14.285714285714334,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2040-01-09",
+    "n": 38,
+    "renta": 0.3482,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 3.9196285714285697,
+    "valor_residual": 10.714285714285765,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2040-07-09",
+    "n": 39,
+    "renta": 0.2612,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 3.83262857142857,
+    "valor_residual": 7.142857142857196,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2041-01-09",
+    "n": 40,
+    "renta": 0.1741,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 3.74552857142857,
+    "valor_residual": 3.571428571428626,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2041-07-09",
+    "n": 41,
+    "renta": 0.0871,
+    "amort_usd": 3.57142857142857,
+    "flujo_total": 3.65852857142857,
+    "valor_residual": 5.595524044110789e-14,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "GD46": {
+  "ticker": "GD46",
+  "ley": "Extranjera (NY)",
+  "moneda": "USD",
+  "emision": "04/09/2020",
+  "vencimiento": "09/07/2046",
+  "cupon": "Step-up hasta 5,00%, semestral",
+  "amortizacion": "44 cuotas semestrales iguales (9/1/2025 a 9/7/2046)",
+  "ref_precio_limpio": 76.6,
+  "ref_tir": 0.07752818763256075,
+  "ref_md": 6.2029932003843244,
+  "ref_paridad": 0.806251092645577,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2021-07-09",
+    "n": 1,
+    "renta": 0.0625,
+    "amort_usd": 0,
+    "flujo_total": 0.0625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-01-09",
+    "n": 2,
+    "renta": 0.5625,
+    "amort_usd": 0,
+    "flujo_total": 0.5625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2022-07-09",
+    "n": 3,
+    "renta": 0.5625,
+    "amort_usd": 0,
+    "flujo_total": 0.5625,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-01-09",
+    "n": 4,
+    "renta": 0.75,
+    "amort_usd": 0,
+    "flujo_total": 0.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2023-07-09",
+    "n": 5,
+    "renta": 0.75,
+    "amort_usd": 0,
+    "flujo_total": 0.75,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-01-09",
+    "n": 6,
+    "renta": 1.8125,
+    "amort_usd": 0,
+    "flujo_total": 1.8125,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2024-07-09",
+    "n": 7,
+    "renta": 1.8125,
+    "amort_usd": 0,
+    "flujo_total": 1.8125,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-01-09",
+    "n": 8,
+    "renta": 2.0625,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.33522727272727,
+    "valor_residual": 97.72727272727273,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-07-09",
+    "n": 9,
+    "renta": 2.0156,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.28832727272727,
+    "valor_residual": 95.45454545454547,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-01-09",
+    "n": 10,
+    "renta": 1.9688,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.24152727272727,
+    "valor_residual": 93.1818181818182,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-07-09",
+    "n": 11,
+    "renta": 1.9219,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.19462727272727,
+    "valor_residual": 90.90909090909093,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-01-09",
+    "n": 12,
+    "renta": 1.875,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.14772727272727,
+    "valor_residual": 88.63636363636367,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-07-09",
+    "n": 13,
+    "renta": 1.8281,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.10082727272727,
+    "valor_residual": 86.3636363636364,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-01-09",
+    "n": 14,
+    "renta": 1.8892,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.16192727272727,
+    "valor_residual": 84.09090909090914,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-07-09",
+    "n": 15,
+    "renta": 1.8395,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.11222727272727,
+    "valor_residual": 81.81818181818187,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-01-09",
+    "n": 16,
+    "renta": 2.0455,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.31822727272727,
+    "valor_residual": 79.5454545454546,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2029-07-09",
+    "n": 17,
+    "renta": 1.9886,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.26132727272727,
+    "valor_residual": 77.27272727272734,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-01-09",
+    "n": 18,
+    "renta": 1.9318,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.20452727272727,
+    "valor_residual": 75.00000000000007,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2030-07-09",
+    "n": 19,
+    "renta": 1.875,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.14772727272727,
+    "valor_residual": 72.7272727272728,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-01-09",
+    "n": 20,
+    "renta": 1.8182,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.09092727272727,
+    "valor_residual": 70.45454545454554,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2031-07-09",
+    "n": 21,
+    "renta": 1.7614,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 4.03412727272727,
+    "valor_residual": 68.18181818181827,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-01-09",
+    "n": 22,
+    "renta": 1.7045,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.9772272727272697,
+    "valor_residual": 65.909090909091,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2032-07-09",
+    "n": 23,
+    "renta": 1.6477,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.9204272727272698,
+    "valor_residual": 63.63636363636374,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-01-09",
+    "n": 24,
+    "renta": 1.5909,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.86362727272727,
+    "valor_residual": 61.36363636363647,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2033-07-09",
+    "n": 25,
+    "renta": 1.5341,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.80682727272727,
+    "valor_residual": 59.09090909090921,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-01-09",
+    "n": 26,
+    "renta": 1.4773,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.75002727272727,
+    "valor_residual": 56.81818181818194,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2034-07-09",
+    "n": 27,
+    "renta": 1.4205,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.69322727272727,
+    "valor_residual": 54.545454545454675,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-01-09",
+    "n": 28,
+    "renta": 1.3636,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.6363272727272697,
+    "valor_residual": 52.27272727272741,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2035-07-09",
+    "n": 29,
+    "renta": 1.3068,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.57952727272727,
+    "valor_residual": 50.00000000000014,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2036-01-09",
+    "n": 30,
+    "renta": 1.25,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.52272727272727,
+    "valor_residual": 47.727272727272876,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2036-07-09",
+    "n": 31,
+    "renta": 1.1932,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.46592727272727,
+    "valor_residual": 45.45454545454561,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2037-01-09",
+    "n": 32,
+    "renta": 1.1364,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.40912727272727,
+    "valor_residual": 43.18181818181834,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2037-07-09",
+    "n": 33,
+    "renta": 1.0795,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.3522272727272697,
+    "valor_residual": 40.90909090909108,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2038-01-09",
+    "n": 34,
+    "renta": 1.0227,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.2954272727272698,
+    "valor_residual": 38.63636363636381,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2038-07-09",
+    "n": 35,
+    "renta": 0.9659,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.23862727272727,
+    "valor_residual": 36.363636363636545,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2039-01-09",
+    "n": 36,
+    "renta": 0.9091,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.18182727272727,
+    "valor_residual": 34.09090909090928,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2039-07-09",
+    "n": 37,
+    "renta": 0.8523,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.12502727272727,
+    "valor_residual": 31.81818181818201,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2040-01-09",
+    "n": 38,
+    "renta": 0.7955,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.06822727272727,
+    "valor_residual": 29.54545454545474,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2040-07-09",
+    "n": 39,
+    "renta": 0.7386,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 3.0113272727272697,
+    "valor_residual": 27.27272727272747,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2041-01-09",
+    "n": 40,
+    "renta": 0.6818,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.95452727272727,
+    "valor_residual": 25.0000000000002,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2041-07-09",
+    "n": 41,
+    "renta": 0.625,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.89772727272727,
+    "valor_residual": 22.72727272727293,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2042-01-09",
+    "n": 42,
+    "renta": 0.5682,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.84092727272727,
+    "valor_residual": 20.45454545454566,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2042-07-09",
+    "n": 43,
+    "renta": 0.5114,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.78412727272727,
+    "valor_residual": 18.18181818181839,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2043-01-09",
+    "n": 44,
+    "renta": 0.4545,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.7272272727272697,
+    "valor_residual": 15.90909090909112,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2043-07-09",
+    "n": 45,
+    "renta": 0.3977,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.6704272727272698,
+    "valor_residual": 13.63636363636385,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2044-01-09",
+    "n": 46,
+    "renta": 0.3409,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.61362727272727,
+    "valor_residual": 11.36363636363658,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2044-07-09",
+    "n": 47,
+    "renta": 0.2841,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.55682727272727,
+    "valor_residual": 9.09090909090931,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2045-01-09",
+    "n": 48,
+    "renta": 0.2273,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.50002727272727,
+    "valor_residual": 6.81818181818204,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2045-07-09",
+    "n": 49,
+    "renta": 0.1705,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.44322727272727,
+    "valor_residual": 4.545454545454771,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2046-01-09",
+    "n": 50,
+    "renta": 0.1136,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.3863272727272697,
+    "valor_residual": 2.2727272727275007,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2046-07-09",
+    "n": 51,
+    "renta": 0.0568,
+    "amort_usd": 2.27272727272727,
+    "flujo_total": 2.32952727272727,
+    "valor_residual": 2.3092638912203256e-13,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "BPOA7": {
+  "ticker": "BPOA7",
+  "ley": "BCRA BOPREAL Serie 1-A",
+  "moneda": "USD",
+  "emision": "05/01/2024",
+  "vencimiento": "31/10/2027",
+  "cupon": "5,00% anual, semestral (30/4 y 31/10)",
+  "amortizacion": "50% 30/4/2027 + 50% 31/10/2027",
+  "ref_precio_limpio": null,
+  "ref_tir": null,
+  "ref_md": null,
+  "ref_paridad": null,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2024-10-31",
+    "n": 1,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-04-30",
+    "n": 2,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-10-31",
+    "n": 3,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-04-30",
+    "n": 4,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-10-31",
+    "n": 5,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-04-30",
+    "n": 6,
+    "renta": 2.5,
+    "amort_usd": 50,
+    "flujo_total": 52.5,
+    "valor_residual": 50,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-10-31",
+    "n": 7,
+    "renta": 1.25,
+    "amort_usd": 50,
+    "flujo_total": 51.25,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "BPOB7": {
+  "ticker": "BPOB7",
+  "ley": "BCRA BOPREAL Serie 1-B",
+  "moneda": "USD",
+  "emision": "05/01/2024",
+  "vencimiento": "31/10/2027",
+  "cupon": "5,00% anual, semestral (30/4 y 31/10)",
+  "amortizacion": "50% 30/4/2027 + 50% 31/10/2027",
+  "ref_precio_limpio": null,
+  "ref_tir": null,
+  "ref_md": null,
+  "ref_paridad": null,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2024-10-31",
+    "n": 1,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-04-30",
+    "n": 2,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-10-31",
+    "n": 3,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-04-30",
+    "n": 4,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-10-31",
+    "n": 5,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-04-30",
+    "n": 6,
+    "renta": 2.5,
+    "amort_usd": 50,
+    "flujo_total": 52.5,
+    "valor_residual": 50,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-10-31",
+    "n": 7,
+    "renta": 1.25,
+    "amort_usd": 50,
+    "flujo_total": 51.25,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "BPOC7": {
+  "ticker": "BPOC7",
+  "ley": "BCRA BOPREAL Serie 1-C",
+  "moneda": "USD",
+  "emision": "05/01/2024",
+  "vencimiento": "31/10/2027",
+  "cupon": "5,00% anual, semestral (30/4 y 31/10)",
+  "amortizacion": "50% 30/4/2027 + 50% 31/10/2027",
+  "ref_precio_limpio": null,
+  "ref_tir": null,
+  "ref_md": null,
+  "ref_paridad": null,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2024-10-31",
+    "n": 1,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-04-30",
+    "n": 2,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-10-31",
+    "n": 3,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-04-30",
+    "n": 4,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-10-31",
+    "n": 5,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-04-30",
+    "n": 6,
+    "renta": 2.5,
+    "amort_usd": 50,
+    "flujo_total": 52.5,
+    "valor_residual": 50,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-10-31",
+    "n": 7,
+    "renta": 1.25,
+    "amort_usd": 50,
+    "flujo_total": 51.25,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "BPOD7": {
+  "ticker": "BPOD7",
+  "ley": "BCRA BOPREAL Serie 1-D",
+  "moneda": "USD",
+  "emision": "05/01/2024",
+  "vencimiento": "31/10/2027",
+  "cupon": "5,00% anual, semestral (30/4 y 31/10)",
+  "amortizacion": "50% 30/4/2027 + 50% 31/10/2027",
+  "ref_precio_limpio": null,
+  "ref_tir": null,
+  "ref_md": null,
+  "ref_paridad": null,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2024-10-31",
+    "n": 1,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-04-30",
+    "n": 2,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2025-10-31",
+    "n": 3,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-04-30",
+    "n": 4,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-10-31",
+    "n": 5,
+    "renta": 2.5,
+    "amort_usd": 0,
+    "flujo_total": 2.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-04-30",
+    "n": 6,
+    "renta": 2.5,
+    "amort_usd": 50,
+    "flujo_total": 52.5,
+    "valor_residual": 50,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-10-31",
+    "n": 7,
+    "renta": 1.25,
+    "amort_usd": 50,
+    "flujo_total": 51.25,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "BPOA8": {
+  "ticker": "BPOA8",
+  "ley": "BCRA BOPREAL Serie 4-A",
+  "moneda": "USD",
+  "emision": "24/06/2025",
+  "vencimiento": "31/10/2028",
+  "cupon": "3,00% anual, semestral (30/4 y 31/10)",
+  "amortizacion": "Íntegra al vencimiento (bullet)",
+  "ref_precio_limpio": null,
+  "ref_tir": null,
+  "ref_md": null,
+  "ref_paridad": null,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2025-10-31",
+    "n": 1,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-04-30",
+    "n": 2,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-10-31",
+    "n": 3,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-04-30",
+    "n": 4,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-10-31",
+    "n": 5,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-04-30",
+    "n": 6,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-10-31",
+    "n": 7,
+    "renta": 1.5,
+    "amort_usd": 100,
+    "flujo_total": 101.5,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ },
+ "BPOB8": {
+  "ticker": "BPOB8",
+  "ley": "BCRA BOPREAL Serie 4-B",
+  "moneda": "USD",
+  "emision": "24/06/2025",
+  "vencimiento": "31/10/2028",
+  "cupon": "3,00% anual, semestral (30/4 y 31/10)",
+  "amortizacion": "Íntegra al vencimiento (bullet)",
+  "ref_precio_limpio": null,
+  "ref_tir": null,
+  "ref_md": null,
+  "ref_paridad": null,
+  "ref_valuacion": "2026-06-30",
+  "schedule": [
+   {
+    "fecha": "2025-10-31",
+    "n": 1,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-04-30",
+    "n": 2,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pagado"
+   },
+   {
+    "fecha": "2026-10-31",
+    "n": 3,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-04-30",
+    "n": 4,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2027-10-31",
+    "n": 5,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-04-30",
+    "n": 6,
+    "renta": 1.5,
+    "amort_usd": 0,
+    "flujo_total": 1.5,
+    "valor_residual": 100,
+    "estado": "Pendiente"
+   },
+   {
+    "fecha": "2028-10-31",
+    "n": 7,
+    "renta": 1.5,
+    "amort_usd": 100,
+    "flujo_total": 101.5,
+    "valor_residual": 0,
+    "estado": "Pendiente"
+   }
+  ]
+ }
+}
