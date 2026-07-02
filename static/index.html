@@ -136,6 +136,7 @@
   <div class="tabs">
     <button class="tab on" data-v="pesos">Tasa Fija en Pesos</button>
     <button class="tab" data-v="hd">Soberanos Hard Dólar</button>
+    <button class="tab" data-v="acc">Acciones Argentinas</button>
   </div>
 
   <!-- ================= PESOS ================= -->
@@ -182,8 +183,27 @@
     </div>
   </section>
 
+  <!-- ================= ACCIONES ================= -->
+  <section id="view-acc" class="hidden">
+    <div class="kpis" id="kpis-acc"></div>
+    <div class="card">
+      <div class="card-h">
+        <h2>Panel líder <small>variación del día · S&amp;P Merval</small></h2>
+      </div>
+      <div class="chart-box" style="height:420px"><canvas id="chart-acc"></canvas></div>
+    </div>
+    <div class="card" style="padding-bottom:2px">
+      <table id="tbl-acc">
+        <thead><tr>
+          <th>Ticker</th><th>Empresa</th><th>Precio</th><th>Var.</th><th>Volumen</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
   <footer id="foot">
-    Precios y tasas calculados sobre la fecha de liquidación del día · convención LECAP/BONCAP y TIR act/365 replicadas del modelo interno. · <b>build 2</b>
+    Precios y tasas calculados sobre la fecha de liquidación del día · convención LECAP/BONCAP y TIR act/365 replicadas del modelo interno. · Merval estimado: prom. ponderado por volumen del panel líder. · <b>build 3</b>
   </footer>
 </div>
 
@@ -223,7 +243,7 @@ function trendLine(xs,ys,d,steps=60){
 const CSS=k=>getComputedStyle(document.documentElement).getPropertyValue(k).trim();
 
 // ---------- estado / charts ----------
-let feedName='—', pesosMode='tna', chPesos=null, chHd=null;
+let feedName='—', pesosMode='tna', chPesos=null, chHd=null, chAcc=null;
 
 Chart.defaults.color=CSS('--muted');
 Chart.defaults.font.family=CSS('--mono');
@@ -359,6 +379,52 @@ function renderHd(data){
       <td>${pct1(r.paridad)}</td><td>${varCell(r.var_pct)}</td></tr>`).join('');
 }
 
+// ---------- ACCIONES ----------
+function renderAcciones(data){
+  feedName=data.feed; setFeedTag(data);
+  const rows=data.rows;
+  const mv=data.merval_est;
+  const mvCls=mv==null?'flat':mv>0?'up':mv<0?'down':'flat';
+  const mvTxt=mv==null?'—':(mv>0?'+':'')+mv.toFixed(2)+'%';
+  $('#kpis-acc').innerHTML=[
+    ['Merval (est.)',`<span class="${mvCls}">${mvTxt}</span>`,'prom. pond. panel líder'],
+    ['Suben / Bajan',`<span class="up">${data.suben}</span> / <span class="down">${data.bajan}</span>`,'del panel líder'],
+    ['Mejor',data.mejor?`<span class="up">${data.mejor.ticker} ${data.mejor.var_pct>0?'+':''}${data.mejor.var_pct.toFixed(2)}%</span>`:'—','del día'],
+    ['Peor',data.peor?`<span class="down">${data.peor.ticker} ${data.peor.var_pct.toFixed(2)}%</span>`:'—','del día'],
+  ].map(k=>`<div class="kpi"><div class="k">${k[0]}</div><div class="v">${k[1]}</div><div class="s">${k[2]}</div></div>`).join('');
+
+  // gráfico de barras horizontales de variación (ordenado desc)
+  const withVar=rows.filter(r=>r.var_pct!=null);
+  const labels=withVar.map(r=>r.ticker);
+  const vals=withVar.map(r=>r.var_pct);
+  const colors=vals.map(v=>v>=0?CSS('--pos'):CSS('--neg'));
+  const ds=[{label:'Var. %',data:vals,backgroundColor:colors,borderWidth:0,
+    borderRadius:3,barPercentage:.82,categoryPercentage:.86}];
+  const opts={indexAxis:'y',responsive:true,maintainAspectRatio:false,
+    scales:{
+      x:{grid:{color:CSS('--line-soft')},border:{color:CSS('--line')},
+         ticks:{callback:v=>v.toFixed(1)+'%'}},
+      y:{grid:{display:false},border:{color:CSS('--line')},
+         ticks:{font:{family:CSS('--mono'),size:11}}}},
+    plugins:{legend:{display:false},
+      tooltip:{backgroundColor:'#0a1830',borderColor:CSS('--line'),borderWidth:1,
+        titleColor:'#fff',bodyColor:CSS('--ink'),padding:10,displayColors:false,
+        callbacks:{label:c=>`${(c.raw>0?'+':'')}${c.raw.toFixed(2)}%`}}}};
+  try{
+    if(!chAcc){chAcc=new Chart($('#chart-acc'),{type:'bar',data:{labels,datasets:ds},options:opts});}
+    else{chAcc.data.labels=labels;chAcc.data.datasets=ds;chAcc.options=opts;chAcc.update('none');}
+  }catch(e){console.error('chart acc:',e);}
+
+  // tabla
+  const fvol=v=>v==null?'<span class="nd">—</span>':v.toLocaleString('es-AR',{maximumFractionDigits:0});
+  $('#tbl-acc tbody').innerHTML=rows.map(r=>`
+    <tr><td class="tk">${r.ticker}</td>
+      <td style="text-align:left;color:var(--muted)">${r.nombre}</td>
+      <td>${r.precio!=null?num(r.precio,2):'<span class="nd">s/precio</span>'}</td>
+      <td>${varCell(r.var_pct)}</td>
+      <td>${fvol(r.volumen)}</td></tr>`).join('');
+}
+
 function setFeedTag(data){
   const t=$('#feedTag');t.textContent=data.feed;t.className='feed-tag '+data.feed;
   $('#asof').textContent='datos '+(data.asof||'').replace('T',' ').slice(0,19);
@@ -367,10 +433,11 @@ function setFeedTag(data){
 // ---------- ciclo ----------
 async function load(){
   try{
-    const [p,h]=await Promise.all([
+    const [p,h,a]=await Promise.all([
       fetch('/api/curva-pesos').then(r=>r.json()),
-      fetch('/api/curva-hd').then(r=>r.json())]);
-    renderPesos(p); renderHd(h);
+      fetch('/api/curva-hd').then(r=>r.json()),
+      fetch('/api/acciones').then(r=>r.json())]);
+    renderPesos(p); renderHd(h); renderAcciones(a);
   }catch(e){ console.error(e); $('#asof').textContent='error al cargar el feed'; }
 }
 async function boot(){
@@ -386,6 +453,7 @@ $$('.tab').forEach(b=>b.onclick=()=>{
   const v=b.dataset.v;
   $('#view-pesos').classList.toggle('hidden',v!=='pesos');
   $('#view-hd').classList.toggle('hidden',v!=='hd');
+  $('#view-acc').classList.toggle('hidden',v!=='acc');
 });
 // toggle TNA/TEM
 $('#tg-pesos').addEventListener('click',e=>{
