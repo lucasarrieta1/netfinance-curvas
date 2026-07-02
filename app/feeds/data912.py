@@ -20,7 +20,7 @@ BASE = "https://data912.com"
 #   arg_notes = letras (LECAP) · arg_bonds = bonos (incluye variantes D/C) · arg_corp = ONs
 # Si las variantes dólar (AL30D, GD30D...) no aparecieran en arg_bonds, sumá
 # el panel correspondiente acá; el resto del sistema no cambia.
-PANELS = ["/live/arg_notes", "/live/arg_bonds", "/live/arg_corp"]
+PANELS = ["/live/arg_notes", "/live/arg_bonds", "/live/arg_corp", "/live/arg_stocks"]
 
 
 def _f(v):
