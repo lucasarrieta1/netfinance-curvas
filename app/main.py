@@ -17,7 +17,7 @@ import os
 
 from . import calc
 from .config import get_provider, REFRESH_SECONDS, FEED
-from .instruments import LECAPS, HD_BONDS
+from .instruments import LECAPS, HD_BONDS, ACCIONES
 
 app = FastAPI(title="NetFinance — Curvas en vivo")
 
@@ -28,7 +28,7 @@ _STATIC = os.path.join(os.path.dirname(__file__), "..", "static")
 _cache: dict[str, object] = {"ts": 0.0, "quotes": {}}
 _lock = threading.Lock()
 
-_ALL_SYMBOLS = [i["feed_symbol"] for i in LECAPS + HD_BONDS]
+_ALL_SYMBOLS = [i["feed_symbol"] for i in LECAPS + HD_BONDS + ACCIONES]
 
 
 def _quotes() -> dict:
@@ -102,10 +102,44 @@ def curva_hd():
     return _hd_payload()
 
 
+@app.get("/api/acciones")
+def acciones():
+    q = _quotes()
+    rows = []
+    num = den = 0.0          # para variación estimada ponderada por volumen
+    suben = bajan = 0
+    for i in ACCIONES:
+        quote = q.get(i["feed_symbol"])
+        px = quote.price if quote else None
+        var = quote.var_pct if quote else None
+        vol = quote.volume if quote else None
+        if var is not None:
+            if var > 0.01:
+                suben += 1
+            elif var < -0.01:
+                bajan += 1
+            w = vol if (vol and vol > 0) else 1.0
+            num += var * w
+            den += w
+        rows.append({"ticker": i["ticker"], "nombre": i["nombre"],
+                     "precio": px, "var_pct": var, "volumen": vol,
+                     "hora": quote.ts if quote else None})
+    merval_est = (num / den) if den else None
+    con_datos = [r for r in rows if r["var_pct"] is not None]
+    mejor = max(con_datos, key=lambda r: r["var_pct"], default=None)
+    peor = min(con_datos, key=lambda r: r["var_pct"], default=None)
+    rows.sort(key=lambda r: (r["var_pct"] is None, -(r["var_pct"] or 0)))
+    return {"tipo": "acciones", "feed": FEED,
+            "asof": _dt.datetime.now().isoformat(timespec="seconds"),
+            "merval_est": merval_est, "suben": suben, "bajan": bajan,
+            "mejor": mejor, "peor": peor, "rows": rows}
+
+
 @app.get("/api/health")
 def health():
     return {"ok": True, "feed": FEED, "refresh_s": REFRESH_SECONDS,
-            "instrumentos": {"pesos": len(LECAPS), "hd": len(HD_BONDS)}}
+            "instrumentos": {"pesos": len(LECAPS), "hd": len(HD_BONDS),
+                             "acciones": len(ACCIONES)}}
 
 
 @app.get("/api/diag")
@@ -120,9 +154,10 @@ def diag():
                 "encontrado": bool(quote and quote.price)}
     pesos = [row(i) for i in LECAPS]
     hd = [row(i) for i in HD_BONDS]
-    ok = sum(1 for r in pesos + hd if r["encontrado"])
-    return {"feed": FEED, "encontrados": ok, "total": len(pesos) + len(hd),
-            "pesos": pesos, "hd": hd}
+    acc = [row(i) for i in ACCIONES]
+    ok = sum(1 for r in pesos + hd + acc if r["encontrado"])
+    return {"feed": FEED, "encontrados": ok, "total": len(pesos) + len(hd) + len(acc),
+            "pesos": pesos, "hd": hd, "acciones": acc}
 
 
 @app.get("/")

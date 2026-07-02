@@ -74,6 +74,38 @@ def load_hd_bonds() -> list[dict]:
 
 HD_BONDS = load_hd_bonds()
 
+# --- Acciones · Panel Líder (S&P Merval) --------------------------------
+# Composición del panel líder (se revisa por trimestre). Editá esta lista si
+# BYMA/S&P cambia constituyentes. px_ref = valor indicativo solo para el mock.
+_ACCIONES_ROWS = [
+    ("ALUA",  "Aluar",                       900.0),
+    ("BBAR",  "Banco BBVA Argentina",       8000.0),
+    ("BMA",   "Banco Macro",               12000.0),
+    ("BYMA",  "BYMA",                         500.0),
+    ("CEPU",  "Central Puerto",             1800.0),
+    ("COME",  "Soc. Comercial del Plata",    200.0),
+    ("CRES",  "Cresud",                      2200.0),
+    ("EDN",   "Edenor",                      3500.0),
+    ("GGAL",  "Grupo Financiero Galicia",    7000.0),
+    ("LOMA",  "Loma Negra",                  3000.0),
+    ("METR",  "Metrogas",                    2500.0),
+    ("MIRG",  "Mirgor",                     25000.0),
+    ("PAMP",  "Pampa Energía",               4500.0),
+    ("SUPV",  "Grupo Supervielle",           4000.0),
+    ("TECO2", "Telecom Argentina",           3500.0),
+    ("TGNO4", "Transp. Gas del Norte",       3000.0),
+    ("TGSU2", "Transp. Gas del Sur",         7000.0),
+    ("TRAN",  "Transener",                   2500.0),
+    ("TXAR",  "Ternium Argentina",            900.0),
+    ("VALO",  "Grupo Fin. Valores",           400.0),
+    ("YPFD",  "YPF",                        45000.0),
+]
+
+ACCIONES = [
+    {"ticker": t, "nombre": n, "feed_symbol": t, "moneda": "ARS", "px_ref": px}
+    for (t, n, px) in _ACCIONES_ROWS
+]
+
 # Índice símbolo_feed -> precio_ref, para el MockProvider
-PX_REF = {i["feed_symbol"]: i["px_ref"] for i in LECAPS + HD_BONDS
+PX_REF = {i["feed_symbol"]: i["px_ref"] for i in LECAPS + HD_BONDS + ACCIONES
           if i["px_ref"] is not None}
